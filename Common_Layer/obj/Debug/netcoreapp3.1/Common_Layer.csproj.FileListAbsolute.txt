@@ -1,0 +1,10 @@
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\bin\Debug\netcoreapp3.1\Common_Layer.deps.json
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\bin\Debug\netcoreapp3.1\Common_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\bin\Debug\netcoreapp3.1\Common_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\obj\Debug\netcoreapp3.1\Common_Layer.GeneratedMSBuildEditorConfig.editorconfig
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\obj\Debug\netcoreapp3.1\Common_Layer.AssemblyInfoInputs.cache
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\obj\Debug\netcoreapp3.1\Common_Layer.AssemblyInfo.cs
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\obj\Debug\netcoreapp3.1\Common_Layer.csproj.CoreCompileInputs.cache
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\obj\Debug\netcoreapp3.1\Common_Layer.sourcelink.json
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\obj\Debug\netcoreapp3.1\Common_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\Common_Layer\obj\Debug\netcoreapp3.1\Common_Layer.pdb

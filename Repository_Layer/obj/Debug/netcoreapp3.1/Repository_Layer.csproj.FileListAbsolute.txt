@@ -1,0 +1,14 @@
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\bin\Debug\netcoreapp3.1\Repository_Layer.deps.json
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\bin\Debug\netcoreapp3.1\Repository_Layer.runtimeconfig.json
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\bin\Debug\netcoreapp3.1\Repository_Layer.runtimeconfig.dev.json
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\bin\Debug\netcoreapp3.1\Repository_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\bin\Debug\netcoreapp3.1\Repository_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.csproj.AssemblyReference.cache
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.GeneratedMSBuildEditorConfig.editorconfig
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.AssemblyInfoInputs.cache
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.AssemblyInfo.cs
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.csproj.CoreCompileInputs.cache
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.sourcelink.json
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.genruntimeconfig.cache
