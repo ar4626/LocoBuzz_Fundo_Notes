@@ -12,3 +12,6 @@ F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Reposit
 F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.dll
 F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.pdb
 F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.genruntimeconfig.cache
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\bin\Debug\netcoreapp3.1\Common_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\bin\Debug\netcoreapp3.1\Common_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\Repository_Layer\obj\Debug\netcoreapp3.1\Repository_Layer.csproj.CopyComplete

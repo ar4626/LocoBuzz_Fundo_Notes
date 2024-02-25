@@ -4,6 +4,61 @@
     "F:\\LOCOBUZZ\\Backend\\FundooNotes\\FundooNotes\\FundooNotes.csproj": {}
   },
   "projects": {
+    "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Common_Layer\\Common_Layer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Common_Layer\\Common_Layer.csproj",
+        "projectName": "Common_Layer",
+        "projectPath": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Common_Layer\\Common_Layer.csproj",
+        "packagesPath": "C:\\Users\\Ankit\\.nuget\\packages\\",
+        "outputPath": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Common_Layer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "F:\\LOCOBUZZ\\Backend\\FundooNotes\\FundooNotes\\FundooNotes.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,6 +83,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Manager_Layer\\Manager_Layer.csproj": {
+                "projectPath": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Manager_Layer\\Manager_Layer.csproj"
+              },
               "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Repository_Layer\\Repository_Layer.csproj": {
                 "projectPath": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Repository_Layer\\Repository_Layer.csproj"
               }
@@ -67,6 +125,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -84,6 +146,65 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Manager_Layer\\Manager_Layer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Manager_Layer\\Manager_Layer.csproj",
+        "projectName": "Manager_Layer",
+        "projectPath": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Manager_Layer\\Manager_Layer.csproj",
+        "packagesPath": "C:\\Users\\Ankit\\.nuget\\packages\\",
+        "outputPath": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Manager_Layer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Repository_Layer\\Repository_Layer.csproj": {
+                "projectPath": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Repository_Layer\\Repository_Layer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -115,7 +236,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Common_Layer\\Common_Layer.csproj": {
+                "projectPath": "F:\\LOCOBUZZ\\Backend\\FundooNotes\\Common_Layer\\Common_Layer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -128,6 +253,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.0, )"

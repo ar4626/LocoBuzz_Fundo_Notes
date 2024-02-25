@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Common_Layer.ResponseModel
 {
-    internal class ResModel
+    public class ResModel<T>
     {
+        public bool Success {  get; set; }
+        public string Message { get; set; }
+        public T Data { get; set; }
     }
 }

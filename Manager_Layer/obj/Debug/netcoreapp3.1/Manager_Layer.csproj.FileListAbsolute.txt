@@ -8,3 +8,9 @@ F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\obj\Debug\netcoreapp3.1\Manager_La
 F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\obj\Debug\netcoreapp3.1\Manager_Layer.sourcelink.json
 F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\obj\Debug\netcoreapp3.1\Manager_Layer.dll
 F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\obj\Debug\netcoreapp3.1\Manager_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\bin\Debug\netcoreapp3.1\Common_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\bin\Debug\netcoreapp3.1\Repository_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\bin\Debug\netcoreapp3.1\Repository_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\bin\Debug\netcoreapp3.1\Common_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\obj\Debug\netcoreapp3.1\Manager_Layer.csproj.AssemblyReference.cache
+F:\LOCOBUZZ\Backend\FundooNotes\Manager_Layer\obj\Debug\netcoreapp3.1\Manager_Layer.csproj.CopyComplete

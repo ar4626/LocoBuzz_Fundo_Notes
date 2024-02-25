@@ -46,3 +46,14 @@ F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.genruntimeconfig.cache
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Repository_Layer.dll
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Repository_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\obj\Debug\netcoreapp3.1\FundooNotes.MvcApplicationPartsAssemblyInfo.cs
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\libman.json
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Common_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Manager_Layer.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Manager_Layer.pdb
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Common_Layer.pdb
