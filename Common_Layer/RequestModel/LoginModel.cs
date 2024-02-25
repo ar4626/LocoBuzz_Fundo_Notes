@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Common_Layer.RequestModel
 {
-    public class Login
+    public class LoginModel
     {
         public string Email { get; set; }
         public string Password { get; set; }

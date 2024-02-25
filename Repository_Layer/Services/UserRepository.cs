@@ -36,5 +36,26 @@ namespace Repository_Layer.Services
                 throw new Exception("User Already Exist.");
             }
         }
+
+        public UserEntity UserLogin(LoginModel model)
+        {
+
+            var user = context.UserTable.FirstOrDefault(a => a.Email == model.Email);
+        if (user != null)
+        {
+            if (BCrypt.Net.BCrypt.Verify(model.Password, user.Password))
+            {
+                return user;
+            }
+            else
+            {
+                throw new Exception("Invalid Password!");
+            }
+        }
+        else
+        {
+            throw new Exception("User Not Found");
+        }
+        }
     }
 }

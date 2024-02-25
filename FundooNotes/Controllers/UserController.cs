@@ -20,7 +20,7 @@ namespace FundooNotes.Controllers
         }
 
         [HttpPost]
-        [Route("Reg")]
+        [Route("Register")]
         public ActionResult Register(RegisterModel model)
         {
             try
@@ -34,6 +34,29 @@ namespace FundooNotes.Controllers
                 else
                 {
                     return BadRequest(new ResModel<UserEntity> { Success = false, Message = "Registration Failed", Data = response });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResModel<UserEntity> { Success = false, Message = ex.Message, Data = null });
+            }
+        }
+
+        [HttpPost]
+        [Route("Login")]
+        public ActionResult Login(LoginModel model)
+        {
+            try
+            {
+                var response = userManager.UserLogin(model);
+
+                if (response != null)
+                {
+                    return Ok(new ResModel<UserEntity> { Success = true, Message = "Login Successfully", Data = response });
+                }
+                else
+                {
+                    return BadRequest(new ResModel<UserEntity> { Success = false, Message = "Login Failed", Data = response });
                 }
             }
             catch (Exception ex)
