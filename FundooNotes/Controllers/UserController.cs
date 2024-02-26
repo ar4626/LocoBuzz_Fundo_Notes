@@ -1,10 +1,13 @@
 ﻿using Common_Layer.RequestModel;
 using Common_Layer.ResponseModel;
+using Common_Layer.Utility;
 using Manager_Layer.Interface;
+using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository_Layer.Entity;
 using System;
+using System.Threading.Tasks;
 
 namespace FundooNotes.Controllers
 {
@@ -13,10 +16,12 @@ namespace FundooNotes.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserManager userManager;
+        private readonly IBus bus;
 
-        public UserController(IUserManager userManager)
+        public UserController(IUserManager userManager, IBus bus)
         {
             this.userManager = userManager;
+            this.bus = bus;
         }
 
         [HttpPost]
@@ -48,21 +53,31 @@ namespace FundooNotes.Controllers
         {
             try
             {
-                var response = userManager.UserLogin(model);
+                var token = userManager.UserLogin(model);
 
-                if (response != null)
+                if (token != null)
                 {
-                    return Ok(new ResModel<UserEntity> { Success = true, Message = "Login Successfully", Data = response });
+                    return Ok(new ResModel<string> { Success = true, Message = "Login Successfully", Data = token });
                 }
                 else
                 {
-                    return BadRequest(new ResModel<UserEntity> { Success = false, Message = "Login Failed", Data = response });
+                    return BadRequest(new ResModel<string> { Success = false, Message = "Login Failed", Data = token });
                 }
             }
             catch (Exception ex)
             {
-                return BadRequest(new ResModel<UserEntity> { Success = false, Message = ex.Message, Data = null });
+                return BadRequest(new ResModel<string> { Success = false, Message = ex.Message, Data = null });
             }
+
+
         }
+
+/*        [HttpPost ("ForgetPassword")]
+        public async Task<ActionResult> ForgetPassword(string Email)
+        {
+            Mail mail = new Mail();
+            var check = userManager.ForgetPassword(Email);
+            var checkMail  = context.User.F
+        }*/
     }
 }

@@ -21,7 +21,7 @@ namespace Manager_Layer.Services
             return repository.UserRegistration(model);
         }
 
-        public UserEntity UserLogin(LoginModel model)
+        public string UserLogin(LoginModel model)
         {
             return repository.UserLogin(model);
         }
