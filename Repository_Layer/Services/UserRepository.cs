@@ -1,4 +1,5 @@
 ﻿using Common_Layer.RequestModel;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Repository_Layer.Context;
@@ -78,7 +79,7 @@ namespace Repository_Layer.Services
             };
             var token = new JwtSecurityToken(
                 _config["Jwt:Issuer"],
-                _config["Jwt:Issuer"],
+                _config["Jwt:Audience"],
                 claims: claims,
                 expires: DateTime.UtcNow.AddHours(1), // Token expiration time
                 signingCredentials: credentials
@@ -89,6 +90,22 @@ namespace Repository_Layer.Services
 
             return tokenString;
 
+        }
+
+        public ForgetPasswordModel ForgetPassword(string Email)
+        {
+            UserEntity User = context.UserTable.FirstOrDefault(x => x.Email == Email);
+            ForgetPasswordModel forgetPassword = new ForgetPasswordModel();
+            forgetPassword.Email = User.Email;
+            forgetPassword.UserId = User.UserId;
+            forgetPassword.Token = GenerateToken(Email,User.UserId);
+            return forgetPassword;
+        }
+
+        public bool CheckUser(string Email)
+        {
+            if(context.UserTable.FirstOrDefault(a=>a.Email == Email) == null) return false;
+            return true;
         }
     }
 }

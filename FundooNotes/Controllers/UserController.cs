@@ -72,12 +72,6 @@ namespace FundooNotes.Controllers
 
         }
 
-/*        [HttpPost ("ForgetPassword")]
-        public async Task<ActionResult> ForgetPassword(string Email)
-        {
-            Mail mail = new Mail();
-            var check = userManager.ForgetPassword(Email);
-            var checkMail  = context.User.F
-        }*/
+        
     }
 }

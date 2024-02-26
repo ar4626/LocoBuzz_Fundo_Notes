@@ -26,5 +26,22 @@ namespace Manager_Layer.Services
             return repository.UserLogin(model);
         }
 
+        public string GenerateToken(string Email, int UserId)
+        {
+            return repository.GenerateToken(Email, UserId);
+        }
+
+        public ForgetPasswordModel ForgetPassword(string Email)
+        {
+            return repository.ForgetPassword(Email);
+        }
+
+        public bool CheckUser(string Email)
+        {
+            return repository.CheckUser(Email);
+        }
+
+
+
     }
 }

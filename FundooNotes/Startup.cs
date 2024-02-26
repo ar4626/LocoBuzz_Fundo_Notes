@@ -39,6 +39,8 @@ namespace FundooNotes
             services.AddDbContext<FundooContext>(x => x.UseSqlServer(Configuration.GetConnectionString("dbConnection")));
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IUserManager, UserManager>();
+
+            //RabbitMQ
             services.AddMassTransit(x =>
             {
                 x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>

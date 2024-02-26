@@ -12,5 +12,12 @@ namespace Manager_Layer.Interface
 
         public string UserLogin(LoginModel model);
 
+        public string GenerateToken(string Email, int UserId);
+
+        public ForgetPasswordModel ForgetPassword(string Email);
+        public bool CheckUser(string Email);
+
+
+
     }
 }

@@ -10,7 +10,7 @@ namespace Common_Layer.Utility
     {
         public string SendMail(string ToEmail, string Token)
         {
-            string FromEmail = "finalcall1194@gmail.com";
+            string FromEmail = "ar2646@srmist.edu.in";
             MailMessage Message = new MailMessage(FromEmail, ToEmail);
             string MailBody = "Token Generated : " + Token;
             Message.Subject = "Token Generated For Resetting Password";
@@ -20,7 +20,7 @@ namespace Common_Layer.Utility
 
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             NetworkCredential credential
-                = new NetworkCredential("finalcall1194@gmail.com", "9798869620");
+                = new NetworkCredential(FromEmail, "ckvc cppd gulr nfyd");
 
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
