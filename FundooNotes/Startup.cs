@@ -1,5 +1,6 @@
 using Manager_Layer.Interface;
 using Manager_Layer.Services;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,6 +36,19 @@ namespace FundooNotes
             services.AddDbContext<FundooContext>(x => x.UseSqlServer(Configuration.GetConnectionString("dbConnection")));
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IUserManager, UserManager>();
+            services.AddMassTransit(x =>
+            {
+                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
+                {
+                    config.UseHealthCheck(provider);
+                    config.Host(new Uri("rabbitmq://localhost"), h =>
+                    {
+                        h.Username("guest");
+                        h.Password("guest");
+                    });
+                }));
+            });
+            services.AddMassTransitHostedService();
 
             services.AddSwaggerGen();
         }

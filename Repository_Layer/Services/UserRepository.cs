@@ -41,21 +41,22 @@ namespace Repository_Layer.Services
         {
 
             var user = context.UserTable.FirstOrDefault(a => a.Email == model.Email);
-        if (user != null)
-        {
-            if (BCrypt.Net.BCrypt.Verify(model.Password, user.Password))
+            if (user != null)
             {
-                return user;
+                if (BCrypt.Net.BCrypt.Verify(model.Password, user.Password))
+                {
+                    return user;
+                }
+                else
+                {
+                    throw new Exception("Invalid Password!");
+                }
             }
             else
             {
-                throw new Exception("Invalid Password!");
+                throw new Exception("User Not Found");
             }
         }
-        else
-        {
-            throw new Exception("User Not Found");
-        }
-        }
+
     }
 }
