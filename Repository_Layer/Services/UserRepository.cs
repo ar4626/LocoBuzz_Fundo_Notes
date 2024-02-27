@@ -115,7 +115,7 @@ namespace Repository_Layer.Services
             
             if(CheckUser(user.Email))
             {
-                user.Password = model.ConfirmPassword;
+                user.Password = BCrypt.Net.BCrypt.HashPassword(model.ConfirmPassword);
                 context.SaveChanges();
                 return true;
             }

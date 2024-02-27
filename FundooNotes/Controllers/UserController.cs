@@ -92,7 +92,7 @@ namespace FundooNotes.Controllers
                 }
                 else
                 {
-                    return Ok(new ResModel<string> { Success = false, Message = "Email Doesn't Exist", Data = null });
+                    return BadRequest(new ResModel<string> { Success = false, Message = "Email Doesn't Exist", Data = null });
                 }
             }
             catch (Exception ex)
