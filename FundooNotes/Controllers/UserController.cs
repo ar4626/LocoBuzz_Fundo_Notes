@@ -3,6 +3,7 @@ using Common_Layer.ResponseModel;
 using Common_Layer.Utility;
 using Manager_Layer.Interface;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository_Layer.Entity;
@@ -101,23 +102,25 @@ namespace FundooNotes.Controllers
 
         }
 
-        [HttpPut("ResetPassword")]
-        public async Task<ActionResult> ResetPassword(ResetModel model, string Email)
+        [Authorize]
+        [HttpPost("ResetPassword")]
+        public async Task<ActionResult> ResetPassword(ResetModel model)
         {
             try
             {
-                var user = userManager.ResetPassword(Email, model);
-                if (user != null)
+                string Email = User.FindFirst("Email").Value;
+                if (userManager.ResetPassword(Email, model))
                 {
-                    return Ok(new ResModel<UserEntity> { Success = true, Message = " Password Changed Successfully", Data = user });
+                    return Ok(new ResModel<bool> { Success = true, Message = " Password Changed Successfully", Data = true });
                 }
                 else
                 {
-                    return BadRequest(new ResModel<UserEntity> { Success = false, Message = " Password Reset Failed", Data = null });
+                    return BadRequest(new ResModel<bool> { Success = false, Message = " Password Reset Failed", Data = false });
+
                 }
             }catch (Exception ex)
             {
-                return BadRequest(new ResModel<UserEntity> { Success = false, Message = ex.Message, Data = null});
+                return BadRequest(new ResModel<bool> { Success = false, Message = ex.Message, Data = false});
             }
         }
     }

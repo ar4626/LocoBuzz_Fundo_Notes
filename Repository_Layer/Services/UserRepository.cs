@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using Repository_Layer.Context;
 using Repository_Layer.Entity;
 using Repository_Layer.Interface;
+using Repository_Layer.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -52,7 +53,7 @@ namespace Repository_Layer.Services
             if (user != null)
             {
                 if (BCrypt.Net.BCrypt.Verify(model.Password, user.Password))
-                {
+            {
                     string token = GenerateToken(user.Email, user.UserId);
                     return token;
                 }
@@ -108,7 +109,23 @@ namespace Repository_Layer.Services
             return true;
         }
 
-        public bool VerifyResetToken(string Email, string token)
+        public bool ResetPassword(string Email, ResetModel model)
+        {
+            UserEntity user = context.UserTable.ToList().Find(x => x.Email == Email);   
+            
+            if(CheckUser(user.Email))
+            {
+                user.Password = model.ConfirmPassword;
+                context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /*public bool VerifyResetToken(string Email, string token)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes(_config["Jwt:Key"]);
@@ -149,7 +166,7 @@ namespace Repository_Layer.Services
             {
                 throw new Exception("Invalid Token");
             }
-        }
+        }*/
     }
 }
 

@@ -17,8 +17,9 @@ namespace Manager_Layer.Interface
         public ForgetPasswordModel ForgetPassword(string Email);
         public bool CheckUser(string Email);
 
-        public UserEntity ResetPassword(string Email, ResetModel model);
+        //public UserEntity ResetPassword(string Email, ResetModel model);
 
+        public bool ResetPassword(string Email, ResetModel model);
 
     }
 }
