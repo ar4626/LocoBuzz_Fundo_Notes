@@ -100,5 +100,25 @@ namespace FundooNotes.Controllers
             }
 
         }
+
+        [HttpPut("ResetPassword")]
+        public async Task<ActionResult> ResetPassword(ResetModel model, string Email)
+        {
+            try
+            {
+                var user = userManager.ResetPassword(Email, model);
+                if (user != null)
+                {
+                    return Ok(new ResModel<UserEntity> { Success = true, Message = " Password Changed Successfully", Data = user });
+                }
+                else
+                {
+                    return BadRequest(new ResModel<UserEntity> { Success = false, Message = " Password Reset Failed", Data = null });
+                }
+            }catch (Exception ex)
+            {
+                return BadRequest(new ResModel<UserEntity> { Success = false, Message = ex.Message, Data = null});
+            }
+        }
     }
 }
