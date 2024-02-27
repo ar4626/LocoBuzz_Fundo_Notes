@@ -108,15 +108,21 @@ namespace FundooNotes.Controllers
         {
             try
             {
-                string Email = User.FindFirst("Email").Value;
-                if (userManager.ResetPassword(Email, model))
+                if(model.NewPassword == model.ConfirmPassword)
                 {
-                    return Ok(new ResModel<bool> { Success = true, Message = " Password Changed Successfully", Data = true });
+                    string Email = User.FindFirst("Email").Value;
+                    if (userManager.ResetPassword(Email, model))
+                    {
+                        return Ok(new ResModel<bool> { Success = true, Message = " Password Changed Successfully", Data = true });
+                    }
+                    else
+                    {
+                        return BadRequest(new ResModel<bool> { Success = false, Message = " Password Reset Failed", Data = false });
+                    }
                 }
                 else
                 {
-                    return BadRequest(new ResModel<bool> { Success = false, Message = " Password Reset Failed", Data = false });
-
+                        return BadRequest(new ResModel<bool> { Success = false, Message = " Password & Confirm Password Doesn't Match", Data = false });
                 }
             }catch (Exception ex)
             {
