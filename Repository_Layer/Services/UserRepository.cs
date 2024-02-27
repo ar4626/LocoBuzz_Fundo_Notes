@@ -131,7 +131,25 @@ namespace Repository_Layer.Services
             return emailClaim == Email;
         }
 
-       
+        public UserEntity ResetPassword(string Email, ResetModel model)
+        {
+            if (VerifyResetToken(Email, model.Token))
+            {
+                var user = context.UserTable.FirstOrDefault(context => context.Email == Email);
+                if (user != null)
+                {
+                    //user.Password = BCrypt.Net.BCrypt.HashPassword(model.NewPassword);
+                    user.Password = model.NewPassword;
+                    context.SaveChanges();
+                    return user;
+                }
+                return null;
+            }
+            else
+            {
+                throw new Exception("Invalid Token");
+            }
+        }
     }
 }
 
