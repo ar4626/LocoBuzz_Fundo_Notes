@@ -78,6 +78,7 @@ namespace FundooNotes
             });
             //services.AddMvc();
 
+            //
             services.AddSwaggerGen(option =>
             {
                 option.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
