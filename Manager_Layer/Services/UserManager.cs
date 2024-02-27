@@ -41,6 +41,11 @@ namespace Manager_Layer.Services
             return repository.CheckUser(Email);
         }
 
+        public UserEntity ResetPassword(string Email, ResetModel model)
+        {
+            return repository.ResetPassword(Email, model);
+        }
+
 
 
     }

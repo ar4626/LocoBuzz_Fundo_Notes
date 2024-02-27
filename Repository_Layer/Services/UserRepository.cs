@@ -107,5 +107,31 @@ namespace Repository_Layer.Services
             if(context.UserTable.FirstOrDefault(a=>a.Email == Email) == null) return false;
             return true;
         }
+
+        public bool VerifyResetToken(string Email, string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.UTF8.GetBytes(_config["Jwt:Key"]);
+
+            //Token Validation
+            tokenHandler.ValidateToken(token, new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = true,
+                ValidIssuer = _config["Jwt:Issuer"],
+                ValidateAudience = true,
+                ValidAudience = _config["Jwt:Issuer"],
+                ClockSkew = TimeSpan.Zero
+            }, out SecurityToken validatedToken);
+
+            var jwtToken = (JwtSecurityToken)validatedToken;
+            var emailClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "Email")?.Value;
+
+            return emailClaim == Email;
+        }
+
+       
     }
 }
+
