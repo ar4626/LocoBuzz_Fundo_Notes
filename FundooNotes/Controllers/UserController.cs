@@ -72,6 +72,33 @@ namespace FundooNotes.Controllers
 
         }
 
-        
+        [HttpPost("ForgetPassword")]
+        public async Task<ActionResult> ForgetPassword(string Email)
+        {
+            try
+            {
+                if (userManager.CheckUser(Email))
+                {
+                    Mail mail = new Mail();
+                    ForgetPasswordModel model = userManager.ForgetPassword(Email);
+                    mail.SendMail(model.Email, model.Token);
+                    Uri uri = new Uri("rabbitmq://localhost/FunfooNotesEmailQueue");
+                    var endPoint = await bus.GetSendEndpoint(uri);
+
+                    await endPoint.Send(model);
+
+                    return Ok(new ResModel<string> { Success = true, Message = "Mail Sent Successfully", Data = model.Token });
+                }
+                else
+                {
+                    return Ok(new ResModel<string> { Success = false, Message = "Email Doesn't Exist", Data = null });
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }
