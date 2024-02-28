@@ -4,6 +4,7 @@ using Repository_Layer.Entity;
 using Repository_Layer.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Repository_Layer.Services
@@ -35,5 +36,43 @@ namespace Repository_Layer.Services
 
             return entity;
         }
+
+        public List<NoteEntity> GetAllNotes(int userId)
+        {
+            if(userId != null)
+            {
+                List<NoteEntity> noteList = new List<NoteEntity>();
+                noteList = context.NoteTable.Where(note => note.UserId == userId && note.IsTrash == false).ToList();
+                return noteList;
+            }
+            throw new Exception("User Not Authorised");
+
+        }
+
+        public NoteEntity UpdateNoteByNoteId(int noteId, UpdateNoteModel model, int userId)
+        {
+            if (userId != null)
+            {
+                var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId );
+                if (note != null)
+                {
+                    note.Title = model.Title;
+                    note.Description = model.Description;
+                    context.NoteTable.Update(note);
+                    context.SaveChanges();
+                    return note;
+                }
+                else
+                {
+                    throw new Exception("Note Doesn't Exist");
+                }
+            }
+            else
+            {
+                throw new Exception("User Is not Authenticated");
+            }
+        }
+
+       
     }
 }

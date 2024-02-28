@@ -83,7 +83,7 @@ namespace FundooNotes.Controllers
                     Mail mail = new Mail();
                     ForgetPasswordModel model = userManager.ForgetPassword(Email);
                     mail.SendMail(model.Email, model.Token);
-                    Uri uri = new Uri("rabbitmq://localhost/FunfooNotesEmailQueue");
+                    Uri uri = new Uri("rabbitmq://localhost/FundooNotesEmailQueue");
                     var endPoint = await bus.GetSendEndpoint(uri);
 
                     await endPoint.Send(model);

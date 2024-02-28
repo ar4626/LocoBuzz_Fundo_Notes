@@ -22,6 +22,21 @@ namespace Manager_Layer.Services
             return repository.AddNotes(model,userId);
         }
 
+        public List<NoteEntity> GetAllNotes(int userId)
+        {
+            return repository.GetAllNotes(userId);
+        }
+        public NoteEntity UpdateNoteByNoteId(int noteId, UpdateNoteModel model, int UserId)
+        {
+            return repository.UpdateNoteByNoteId(noteId, model, UserId);
+        }
+        public bool DeleteNote(int noteId, int userId)
+        {
+            return repository.DeleteNote(noteId, userId);
+        }
+
+
+
 
     }
 }

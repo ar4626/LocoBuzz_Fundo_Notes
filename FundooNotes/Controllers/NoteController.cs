@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository_Layer.Entity;
 using System;
+using System.Collections.Generic;
 
 namespace FundooNotes.Controllers
 {
@@ -42,6 +43,81 @@ namespace FundooNotes.Controllers
             catch(Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        [Authorize]
+        [HttpGet]
+        [Route ("GetAllNotes")]
+        public ActionResult GetAllNotes()
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                List<NoteEntity> noteList = noteManager.GetAllNotes(userId);
+                if (noteList.Count==0)
+                {
+                    return BadRequest(new ResModel<List<NoteEntity>> { Success = false, Message = "No Notes are present for the User", Data = null });
+                }
+                else
+                {
+                    return Ok(new ResModel<List<NoteEntity>> { Success = true, Message = "Notes Fetched", Data = noteList });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResModel<List<NoteEntity>> { Success = false, Message = ex.Message, Data = null });
+            }
+
+        }
+
+        [Authorize]
+        [HttpPut]
+        [Route("UpdateNoteById")]
+        public ActionResult UpdateNoteById(int noteId, UpdateNoteModel model)
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                var note = noteManager.UpdateNoteByNoteId(noteId, model, userId);
+                if(note == null)
+                {
+                    return BadRequest(new ResModel<NoteEntity> { Success = false, Message = "Note Updation Failed", Data = null });
+                }
+                else
+                {
+                    return Ok(new ResModel<NoteEntity> { Success = true, Message = $"Note {noteId} Updated Successfully ", Data = note });
+                }
+            }catch(Exception ex)
+            {
+                return BadRequest(new ResModel<NoteEntity> { Success = false, Message = ex.Message, Data = null });
+
+            }
+        }
+
+        [Authorize]
+        [HttpPut]
+        [Route("DeleteNote")]
+        public ActionResult DeleteNoteById(int noteId)
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                var check = noteManager.DeleteNote(noteId, userId);
+                if (check == true)
+                {
+                    return Ok(new ResModel<NoteEntity> { Success = true, Message = "Note Moved To Trash", Data = null });
+                }
+                else
+                {
+                    return BadRequest(new ResModel<NoteEntity> { Success = false, Message = $"Note Doesn't Exist ", Data = null });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResModel<NoteEntity> { Success = false, Message = ex.Message, Data = null });
+
             }
         }
     }
