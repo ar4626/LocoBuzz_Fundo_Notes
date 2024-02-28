@@ -80,10 +80,17 @@ namespace Repository_Layer.Services
                 var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId);
                 if (note != null)
                 {
-                    note.IsTrash = true;
+                    if (note.IsTrash==true)
+                    {
+                        note.IsTrash = false;
+                    }
+                    else
+                    { 
+                        note.IsTrash = true;
+                    }
                     //context.NoteTable.Update(note);
                     context.SaveChanges();
-                    return true;
+                    return note.IsTrash;
                 }
                 else
                 {

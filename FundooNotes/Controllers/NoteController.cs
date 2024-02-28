@@ -98,16 +98,22 @@ namespace FundooNotes.Controllers
 
         [Authorize]
         [HttpPut]
-        [Route("DeleteNote")]
+        [Route("Trash/UnTrash_Note")]
+        [Route("Trash/Trash_Note")]
         public ActionResult DeleteNoteById(int noteId)
         {
             try
             {
                 int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
                 var check = noteManager.DeleteNote(noteId, userId);
+
                 if (check == true)
                 {
                     return Ok(new ResModel<NoteEntity> { Success = true, Message = "Note Moved To Trash", Data = null });
+                }
+                else if (check == false)
+                {
+                    return Ok(new ResModel<NoteEntity> { Success = false, Message = $"Note Moved Out of Trash", Data = null });
                 }
                 else
                 {
@@ -117,8 +123,8 @@ namespace FundooNotes.Controllers
             catch (Exception ex)
             {
                 return BadRequest(new ResModel<NoteEntity> { Success = false, Message = ex.Message, Data = null });
-
             }
         }
+
     }
 }
