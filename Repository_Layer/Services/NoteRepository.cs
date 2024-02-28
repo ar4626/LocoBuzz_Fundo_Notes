@@ -73,6 +73,27 @@ namespace Repository_Layer.Services
             }
         }
 
-       
+        public bool DeleteNote(int noteId, int userId)
+        {
+            if (userId != null)
+            {
+                var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId);
+                if (note != null)
+                {
+                    note.IsTrash = true;
+                    //context.NoteTable.Update(note);
+                    context.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                throw new Exception("User Is not Authenticated");
+            }
+        }
     }
 }
