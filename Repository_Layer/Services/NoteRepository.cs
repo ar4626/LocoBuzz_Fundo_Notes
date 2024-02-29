@@ -133,6 +133,29 @@ namespace Repository_Layer.Services
             }
         }
 
-        
+        public bool DeleteTrashed(int userId)
+        {
+            if (userId != null)
+            {
+                var notesToDelete = context.NoteTable.Where(a => a.IsTrash == true && a.UserId == userId).ToList();
+                foreach (var notes in notesToDelete)
+                {
+                    context.NoteTable.Remove(notes);
+                }
+                context.SaveChanges();
+                if (notesToDelete.Count == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                throw new Exception("User Is not Authenticated");
+            }
+        }
     }
 }
