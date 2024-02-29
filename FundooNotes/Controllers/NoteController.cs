@@ -98,18 +98,46 @@ namespace FundooNotes.Controllers
 
         [Authorize]
         [HttpPut]
-        [Route("Trash/UnTrash_Note")]
-        [Route("Trash/Trash_Note")]
-        public ActionResult DeleteNoteById(int noteId)
+        [Route("Trash")]
+        public ActionResult IsTrash(int noteId)
         {
             try
             {
                 int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
-                var check = noteManager.DeleteNote(noteId, userId);
+                var check = noteManager.IsTrash(noteId, userId);
 
                 if (check == true)
                 {
                     return Ok(new ResModel<NoteEntity> { Success = true, Message = "Note Moved To Trash", Data = null });
+                }
+                else if (check == false)
+                {
+                    return Ok(new ResModel<NoteEntity> { Success = false, Message = $"Note Moved Out of Trash", Data = null });
+                }
+                else
+                {
+                    return BadRequest(new ResModel<NoteEntity> { Success = false, Message = $"Note Doesn't Exist ", Data = null });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResModel<NoteEntity> { Success = false, Message = ex.Message, Data = null });
+            }
+        }
+
+        [Authorize]
+        [HttpPut]
+        [Route("Archive")]
+        public ActionResult IsArchive(int noteId)
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                var check = noteManager.IsArchive(noteId, userId);
+
+                if (check == true)
+                {
+                    return Ok(new ResModel<NoteEntity> { Success = true, Message = "Note Moved To Archive", Data = null });
                 }
                 else if (check == false)
                 {

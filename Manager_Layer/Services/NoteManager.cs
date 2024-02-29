@@ -30,9 +30,13 @@ namespace Manager_Layer.Services
         {
             return repository.UpdateNoteByNoteId(noteId, model, UserId);
         }
-        public bool DeleteNote(int noteId, int userId)
+        public bool IsTrash(int noteId, int userId)
         {
-            return repository.DeleteNote(noteId, userId);
+            return repository.IsTrash(noteId, userId);
+        }
+        public bool IsArchive(int noteId, int userId)
+        {
+            return repository.IsArchive(noteId, userId);
         }
 
 

@@ -42,7 +42,7 @@ namespace Repository_Layer.Services
             if(userId != null)
             {
                 List<NoteEntity> noteList = new List<NoteEntity>();
-                noteList = context.NoteTable.Where(note => note.UserId == userId && note.IsTrash == false).ToList();
+                noteList = context.NoteTable.Where(note => note.UserId == userId && note.IsTrash == false && note.IsArchive == false).ToList();
                 return noteList;
             }
             throw new Exception("User Not Authorised");
@@ -73,7 +73,7 @@ namespace Repository_Layer.Services
             }
         }
 
-        public bool DeleteNote(int noteId, int userId)
+        public bool IsTrash(int noteId, int userId)
         {
             if (userId != null)
             {
@@ -102,5 +102,37 @@ namespace Repository_Layer.Services
                 throw new Exception("User Is not Authenticated");
             }
         }
+
+        public bool IsArchive(int noteId, int userId)
+        {
+            if (userId != null)
+            {
+                var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId);
+                if (note != null)
+                {
+                    if (note.IsArchive == true)
+                    {
+                        note.IsArchive = false;
+                    }
+                    else
+                    {
+                        note.IsArchive = true;
+                    }
+                    //context.NoteTable.Update(note);
+                    context.SaveChanges();
+                    return note.IsArchive;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                throw new Exception("User Is not Authenticated");
+            }
+        }
+
+        
     }
 }
