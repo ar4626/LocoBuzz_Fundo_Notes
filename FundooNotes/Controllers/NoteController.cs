@@ -183,7 +183,28 @@ namespace FundooNotes.Controllers
             }
         }
 
-        
+        [Authorize]
+        [HttpPut("Add-Color")]
+        public ActionResult AddColor(int noteId,string color)
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                var response = noteManager.AddColor(noteId, userId, color);
+                if (response != null)
+                {
+                    return Ok(new ResModel<string> { Success = true, Message = $"Color Added", Data = response});
+                }
+                else
+                {
+                    return BadRequest(new ResModel<string> { Success = false, Message = $"Color Addition Failed", Data = null });
+                }
+            }
+                catch(Exception ex)
+            {
+                return BadRequest(new ResModel<string> { Success = false, Message = ex.Message, Data = null });
+            }
+        }
 
         [Authorize]
         [HttpDelete ("EmptyTrash")]
