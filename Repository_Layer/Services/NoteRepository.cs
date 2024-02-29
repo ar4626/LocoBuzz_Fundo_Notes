@@ -138,6 +138,7 @@ namespace Repository_Layer.Services
             if (userId != null)
             {
                 var notesToDelete = context.NoteTable.Where(a => a.IsTrash == true && a.UserId == userId).ToList();
+                //for deleting each note that is Trashed
                 foreach (var notes in notesToDelete)
                 {
                     context.NoteTable.Remove(notes);
