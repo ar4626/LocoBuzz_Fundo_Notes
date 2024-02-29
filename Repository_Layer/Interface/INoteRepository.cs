@@ -14,6 +14,8 @@ namespace Repository_Layer.Interface
         public NoteEntity UpdateNoteByNoteId(int noteId, UpdateNoteModel model,int userId);
         public bool IsTrash(int noteId, int userId);
         public bool IsArchive(int noteId, int userId);
+        public bool DeleteTrashed(int userId);
+
 
 
     }

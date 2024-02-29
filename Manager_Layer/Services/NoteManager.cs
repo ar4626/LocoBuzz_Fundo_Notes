@@ -38,6 +38,10 @@ namespace Manager_Layer.Services
         {
             return repository.IsArchive(noteId, userId);
         }
+        public bool DeleteTrashed(int userId)
+        {
+            return repository.DeleteTrashed(userId);
+        }
 
 
 

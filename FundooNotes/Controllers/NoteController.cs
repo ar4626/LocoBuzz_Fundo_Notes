@@ -154,5 +154,29 @@ namespace FundooNotes.Controllers
             }
         }
 
+        [Authorize]
+        [HttpDelete ("DeleteTrashed")]
+        public ActionResult DeleteTrashed()
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                var check = noteManager.DeleteTrashed(userId);
+                if (check == true)
+                {
+                    return Ok(new ResModel<bool> { Success = true, Message = "Trash Cleared Successfully", Data = true });
+                }
+                else
+                {
+                    return BadRequest(new ResModel<bool> { Success = false, Message = $"Something went wrong try again.", Data = false });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResModel<bool> { Success = false, Message = ex.Message, Data = false });
+            }
+        }
+
+
     }
 }
