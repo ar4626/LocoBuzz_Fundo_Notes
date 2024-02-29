@@ -38,10 +38,30 @@ namespace Manager_Layer.Services
         {
             return repository.IsArchive(noteId, userId);
         }
-        public bool DeleteTrashed(int userId)
+        public bool IsPin(int noteId, int userId)
         {
-            return repository.DeleteTrashed(userId);
+            return repository.IsPin(noteId, userId);
         }
+        public string AddColor(int noteId, int userId, string color)
+        {
+            return repository.AddColor(noteId, userId, color);
+        }
+
+
+        public bool EmptyTrash(int userId)
+        {
+            return repository.EmptyTrash(userId);
+        }
+        public bool DeleteNote(int userId, int noteId)
+        {
+            return repository.DeleteNote(userId, noteId);
+        }
+        public bool UploadImage(string filepath, int noteId, int userId)
+        {
+            return repository.UploadImage(filepath, noteId, userId);
+        }
+
+
 
 
 

@@ -155,13 +155,44 @@ namespace FundooNotes.Controllers
         }
 
         [Authorize]
-        [HttpDelete ("DeleteTrashed")]
-        public ActionResult DeleteTrashed()
+        [HttpPut]
+        [Route("Pin")]
+        public ActionResult IsPin(int noteId)
         {
             try
             {
                 int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
-                var check = noteManager.DeleteTrashed(userId);
+                var check = noteManager.IsPin(noteId, userId);
+
+                if (check == true)
+                {
+                    return Ok(new ResModel<NoteEntity> { Success = true, Message = "Note Moved To Pin", Data = null });
+                }
+                else if (check == false)
+                {
+                    return Ok(new ResModel<NoteEntity> { Success = false, Message = $"Note Pin Out of Trash", Data = null });
+                }
+                else
+                {
+                    return BadRequest(new ResModel<NoteEntity> { Success = false, Message = $"Note Doesn't Exist ", Data = null });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResModel<NoteEntity> { Success = false, Message = ex.Message, Data = null });
+            }
+        }
+
+        
+
+        [Authorize]
+        [HttpDelete ("EmptyTrash")]
+        public ActionResult EmptyTrash()
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                var check = noteManager.EmptyTrash(userId);
                 if (check == true)
                 {
                     return Ok(new ResModel<bool> { Success = true, Message = "Trash Cleared Successfully", Data = true });
@@ -176,6 +207,53 @@ namespace FundooNotes.Controllers
                 return BadRequest(new ResModel<bool> { Success = false, Message = ex.Message, Data = false });
             }
         }
+
+        [Authorize]
+        [HttpDelete("DeleteNoteId")]
+        public ActionResult DeleteByNoteId(int noteId)
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                var check = noteManager.DeleteNote(userId,noteId);
+                if (check == true)
+                {
+                    return Ok(new ResModel<bool> { Success = true, Message = "Note Deleted Successfully", Data = true });
+                }
+                else
+                {
+                    return BadRequest(new ResModel<bool> { Success = false, Message = $"Note Deletion Failed", Data = false });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResModel<bool> { Success = false, Message = ex.Message, Data = false });
+            }
+        }
+
+        [Authorize]
+        [HttpPut("UploadImage")]
+        public ActionResult UploadImage(string path, int noteId)
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                var check = noteManager.UploadImage(path,noteId,userId);
+                if (check == true)
+                {
+                    return Ok(new ResModel<bool> { Success = true, Message = "Image Uploaded Successfully", Data = true });
+                }
+                else
+                {
+                    return BadRequest(new ResModel<bool> { Success = false, Message = $"Image Upload Failed", Data = false });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResModel<bool> { Success = false, Message = ex.Message, Data = false });
+            }
+        }
+       
 
 
     }

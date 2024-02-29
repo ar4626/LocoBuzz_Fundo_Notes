@@ -75,3 +75,4 @@ F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Newtonsoft.J
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll

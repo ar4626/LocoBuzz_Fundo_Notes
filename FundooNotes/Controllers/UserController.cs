@@ -110,7 +110,7 @@ namespace FundooNotes.Controllers
             {
                 if(model.NewPassword == model.ConfirmPassword)
                 {
-                    string Email = User.FindFirst("Email").Value;
+                    string Email =  User.FindFirst("Email").Value;
                     if (userManager.ResetPassword(Email, model))
                     {
                         return Ok(new ResModel<bool> { Success = true, Message = " Password Changed Successfully", Data = true });

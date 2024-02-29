@@ -1,4 +1,6 @@
-﻿using Common_Layer.RequestModel;
+﻿using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using Common_Layer.RequestModel;
 using Repository_Layer.Context;
 using Repository_Layer.Entity;
 using Repository_Layer.Interface;
@@ -39,10 +41,11 @@ namespace Repository_Layer.Services
 
         public List<NoteEntity> GetAllNotes(int userId)
         {
-            if(userId != null)
+            var filterUser = context.NoteTable.Where(x => x.UserId == userId);
+            if(filterUser != null)
             {
                 List<NoteEntity> noteList = new List<NoteEntity>();
-                noteList = context.NoteTable.Where(note => note.UserId == userId && note.IsTrash == false && note.IsArchive == false).ToList();
+                noteList = filterUser.Where(note => note.IsTrash == false && note.IsArchive == false).ToList();
                 return noteList;
             }
             throw new Exception("User Not Authorised");
@@ -51,112 +54,186 @@ namespace Repository_Layer.Services
 
         public NoteEntity UpdateNoteByNoteId(int noteId, UpdateNoteModel model, int userId)
         {
-            if (userId != null)
+            var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId );
+            if (note != null)
             {
-                var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId );
-                if (note != null)
-                {
-                    note.Title = model.Title;
-                    note.Description = model.Description;
-                    context.NoteTable.Update(note);
-                    context.SaveChanges();
-                    return note;
-                }
-                else
-                {
-                    throw new Exception("Note Doesn't Exist");
-                }
+                note.Title = model.Title;
+                note.Description = model.Description;
+                context.NoteTable.Update(note);
+                context.SaveChanges();
+                return note;
             }
             else
             {
-                throw new Exception("User Is not Authenticated");
+                throw new Exception("Note Doesn't Exist");
             }
         }
 
         public bool IsTrash(int noteId, int userId)
         {
-            if (userId != null)
+
+            var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId);
+            if (note != null)
             {
-                var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId);
-                if (note != null)
+                if (note.IsTrash==true)
                 {
-                    if (note.IsTrash==true)
-                    {
-                        note.IsTrash = false;
-                    }
-                    else
-                    { 
-                        note.IsTrash = true;
-                    }
-                    //context.NoteTable.Update(note);
-                    context.SaveChanges();
-                    return note.IsTrash;
+                    note.IsTrash = false;
                 }
                 else
-                {
-                    return false;
+                { 
+                    note.IsTrash = true;
                 }
+                //context.NoteTable.Update(note);
+                context.SaveChanges();
+                return note.IsTrash;
             }
             else
             {
-                throw new Exception("User Is not Authenticated");
+                return false;
             }
         }
 
         public bool IsArchive(int noteId, int userId)
         {
-            if (userId != null)
+            var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId);
+            if (note != null)
             {
-                var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId);
-                if (note != null)
+                if (note.IsArchive == true)
                 {
-                    if (note.IsArchive == true)
-                    {
-                        note.IsArchive = false;
-                    }
-                    else
-                    {
-                        note.IsArchive = true;
-                    }
-                    //context.NoteTable.Update(note);
-                    context.SaveChanges();
-                    return note.IsArchive;
+                    note.IsArchive = false;
                 }
                 else
                 {
-                    return false;
+                    note.IsArchive = true;
                 }
+                //context.NoteTable.Update(note);
+                context.SaveChanges();
+                return note.IsArchive;
             }
             else
             {
-                throw new Exception("User Is not Authenticated");
+                return false;
             }
         }
 
-        public bool DeleteTrashed(int userId)
+        public bool IsPin(int noteId, int userId)
         {
-            if (userId != null)
+            var note = context.NoteTable.SingleOrDefault(a => a.NoteId == noteId && a.UserId == userId);
+            if (note != null)
             {
-                List<NoteEntity> notesToDelete = context.NoteTable.Where(a => a.IsTrash == true && a.UserId == userId).ToList();
-                int count = notesToDelete.Count;
-                foreach (var notes in notesToDelete)
+                if (note.IsPin == true)
                 {
-                    context.NoteTable.Remove(notes);
-                    count--;
-                }
-                context.SaveChanges();
-                if (count == 0)
-                {
-                    return true;
+                    note.IsPin = false;
                 }
                 else
                 {
-                    return false;
+                    note.IsPin = true;
                 }
+                //context.NoteTable.Update(note);
+                context.SaveChanges();
+                return note.IsPin;
             }
             else
             {
-                throw new Exception("User Is not Authenticated");
+                return false;
+            }
+        }
+
+        public string AddColor(int noteId, int userId, string color)
+        {
+            try
+            {
+                var filteredUser = context.NoteTable.SingleOrDefault(a => a.UserId == userId);
+                if (filteredUser != null)
+                {
+                    var note = context.NoteTable.SingleOrDefault(b => b.NoteId == noteId);
+                    if (note != null)
+                    {
+                        note.Color = color;
+                        return "Color Updated Successfully";
+                    }
+                    return "NoteId Not Found";
+                }
+                return "User Not Found";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+        public bool EmptyTrash(int userId)
+        {
+            List<NoteEntity> notesToDelete = context.NoteTable.Where(a => a.IsTrash == true && a.UserId == userId).ToList();
+            int count = notesToDelete.Count;
+            foreach (var notes in notesToDelete)
+            {
+                context.NoteTable.Remove(notes);
+                count--;
+            }
+            context.SaveChanges();
+            if (count == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteNote(int userId, int noteId)
+        {
+            var noteToDelete = context.NoteTable.SingleOrDefault(a=>a.UserId==userId && a.NoteId==noteId);
+            if (noteToDelete != null)
+            {
+                context.NoteTable.Remove(noteToDelete);
+                context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                throw new Exception("NoteId Not Present");
+            }
+        }
+
+        public bool UploadImage(string filepath,int noteId, int userId)
+        {
+            try
+            {
+                var note = context.NoteTable.FirstOrDefault(a => a.UserId == userId && a.NoteId == noteId);
+                if (note != null)
+                {
+                    Account account = new Account(
+                        "dxycwp9mh",
+                        "261612497618837",
+                        "1Gfedn6FCVHvHlyM-99RxKCaV_M");
+
+                    Cloudinary cloudinary = new Cloudinary(account);
+
+                    ImageUploadParams uploadParams = new ImageUploadParams()
+                    {
+                        File = new FileDescription(filepath),
+                        PublicId = note.Title,
+                        Folder = "FundooNotes"
+                    };
+
+                    var Result = cloudinary.Upload(uploadParams);
+
+                    note.LastUpdatedAt = DateTime.Now;
+                    note.Image = Result.Url.ToString();
+                    context.SaveChanges();
+                    return true;
+                }
+                else
+                { 
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
     }
