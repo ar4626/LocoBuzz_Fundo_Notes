@@ -5,7 +5,6 @@ using Microsoft.IdentityModel.Tokens;
 using Repository_Layer.Context;
 using Repository_Layer.Entity;
 using Repository_Layer.Interface;
-using Repository_Layer.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
