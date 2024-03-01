@@ -215,7 +215,7 @@ namespace Repository_Layer.Services
                     ImageUploadParams uploadParams = new ImageUploadParams()
                     {
                         File = new FileDescription(filepath),
-                        PublicId = note.Title,
+                        PublicId = $"{note.Title}_{note.NoteId}",
                         Folder = "FundooNotes"
                     };
 
