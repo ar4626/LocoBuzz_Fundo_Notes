@@ -43,18 +43,21 @@ namespace Repository_Layer.Services
             return context.LabelTable.Where(a=>a.UserId==userId).ToList();
         }
 
-        public LabelEntity EditLabel(int userId, string labelName, int LabelId)
+        public List<LabelEntity> EditLabel(int userId, string labelName, int LabelId)
         {
             try
             {
                 var filteredUser = context.LabelTable.Where(a => a.UserId == userId);
                 if (filteredUser != null)
                 {
-                    var label = context.LabelTable.SingleOrDefault(b => b.LabelId == LabelId);
-                    if(label != null)
+                    List<LabelEntity> label = context.LabelTable.Where(b => b.LabelName == labelName).ToList();
+                    if(label.Count != 0)
                     {
-                        label.LabelName = labelName;
-                        context.Update(label);
+                        foreach(LabelEntity entity in label)
+                        {
+                            entity.LabelName = labelName;
+                            context.Update(entity);
+                        }
                         context.SaveChanges();
                         return label;
                     }

@@ -65,11 +65,11 @@ namespace FundooNotes.Controllers
             var response = labelManager.EditLabel(userId, labelName,labelId);
             if (response!=null)
             {
-                return Ok(new ResModel<LabelEntity> { Success = true, Message = "Label Updated Successfully", Data = response });
+                return Ok(new ResModel<List<LabelEntity>> { Success = true, Message = "Label Updated Successfully", Data = response });
             }
             else
             {
-                return BadRequest(new ResModel<LabelEntity> { Success = false, Message = "Something Went Wrong", Data = response });
+                return BadRequest(new ResModel<List<LabelEntity>> { Success = false, Message = "Something Went Wrong", Data = response });
 
             }
         }

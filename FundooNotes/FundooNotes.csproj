@@ -5,6 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ankit\.nuget\packages\nlog.config\4.7.15\contentFiles\any\any\NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MassTransit" Version="6.2.5" />
     <PackageReference Include="MassTransit.AspNetCore" Version="6.2.5" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="6.2.5" />
@@ -19,12 +31,18 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="NLog" Version="5.2.8" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Manager_Layer\Manager_Layer.csproj" />
     <ProjectReference Include="..\Repository_Layer\Repository_Layer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="LogFile\" />
   </ItemGroup>
 
 

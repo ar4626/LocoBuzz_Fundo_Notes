@@ -76,3 +76,6 @@ F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Newtonsoft.J
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll

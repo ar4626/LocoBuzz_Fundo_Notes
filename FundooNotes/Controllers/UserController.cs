@@ -6,6 +6,7 @@ using MassTransit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Repository_Layer.Entity;
 using System;
 using System.Threading.Tasks;
@@ -18,11 +19,13 @@ namespace FundooNotes.Controllers
     {
         private readonly IUserManager userManager;
         private readonly IBus bus;
+        private readonly ILogger<UserController> logger;
 
-        public UserController(IUserManager userManager, IBus bus)
+        public UserController(IUserManager userManager, IBus bus, ILogger<UserController> logger)
         {
             this.userManager = userManager;
             this.bus = bus;
+            this.logger = logger;
         }
 
         [HttpPost]
@@ -35,6 +38,7 @@ namespace FundooNotes.Controllers
 
                 if (response != null)
                 {
+                    logger.LogInformation("User Regestered Successfully");
                     return Ok(new ResModel<UserEntity> { Success = true, Message = "Registered Successfully", Data = response });
                 }
                 else
@@ -44,6 +48,7 @@ namespace FundooNotes.Controllers
             }
             catch (Exception ex)
             {
+                logger.LogWarning("User Already Exist");
                 return BadRequest(new ResModel<UserEntity> { Success = false, Message = ex.Message, Data = null });
             }
         }
