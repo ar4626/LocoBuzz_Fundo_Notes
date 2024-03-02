@@ -32,11 +32,9 @@ namespace FundooNotes.Controllers
             {
                 return Ok(new ResModel<LabelEntity> { Success = true, Message = "Label Added Successfully", Data = response });
             }
-            else
-            {
-                return BadRequest(new ResModel<LabelEntity> { Success = false, Message = "Something Went Wrong", Data = response });
-            }
 
+            return BadRequest(new ResModel<LabelEntity> { Success = false, Message = "Something Went Wrong", Data = response });
+           
         }
 
         [Authorize]
@@ -50,10 +48,7 @@ namespace FundooNotes.Controllers
             {
                 return Ok(new ResModel<List<LabelEntity>> { Success = true, Message = "Label Fetched Successfully", Data = labels });
             }
-            else
-            {
-                return BadRequest(new ResModel<List<LabelEntity>> { Success = false, Message = "Something Went Wrong", Data = labels });
-            }
+            return BadRequest(new ResModel<List<LabelEntity>> { Success = false, Message = "Something Went Wrong", Data = labels });
         }
 
         [Authorize]
@@ -67,11 +62,8 @@ namespace FundooNotes.Controllers
             {
                 return Ok(new ResModel<List<LabelEntity>> { Success = true, Message = "Label Updated Successfully", Data = response });
             }
-            else
-            {
-                return BadRequest(new ResModel<List<LabelEntity>> { Success = false, Message = "Something Went Wrong", Data = response });
+            return BadRequest(new ResModel<List<LabelEntity>> { Success = false, Message = "Something Went Wrong", Data = response });
 
-            }
         }
 
         [Authorize]
@@ -85,11 +77,7 @@ namespace FundooNotes.Controllers
             {
                 return Ok(new ResModel<bool> { Success = true, Message = "Label Deleted Successfully", Data = response });
             }
-            else
-            {
-                return BadRequest(new ResModel<bool> { Success = false, Message = "Something Went Wrong", Data = response });
-
-            }
+            return BadRequest(new ResModel<bool> { Success = false, Message = "Something Went Wrong", Data = response });
         }
     }
 }

@@ -50,7 +50,7 @@ namespace Repository_Layer.Services
                 var filteredUser = context.LabelTable.Where(a => a.UserId == userId);
                 if (filteredUser != null)
                 {
-                    List<LabelEntity> label = context.LabelTable.Where(b => b.LabelName == labelName).ToList();
+                    List<LabelEntity> label = filteredUser.Where(b => b.LabelName == labelName).ToList();
                     if(label.Count != 0)
                     {
                         foreach(LabelEntity entity in label)
@@ -78,7 +78,7 @@ namespace Repository_Layer.Services
                 var filteredUser = context.LabelTable.Where(a=>a.UserId == userId);
                 if (filteredUser != null)
                 {
-                    var label = context.LabelTable.SingleOrDefault(a => a.LabelId == LabelId);
+                    var label = filteredUser.SingleOrDefault(a => a.LabelId == LabelId);
                     if (label != null)
                     {
                         context.LabelTable.Remove(label);
