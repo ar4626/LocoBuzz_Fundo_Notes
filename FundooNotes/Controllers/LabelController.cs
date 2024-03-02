@@ -1,10 +1,12 @@
 ﻿using Common_Layer.ResponseModel;
 using Manager_Layer.Interface;
+using MassTransit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository_Layer.Entity;
 using System;
+using System.Collections.Generic;
 
 namespace FundooNotes.Controllers
 {
@@ -35,6 +37,23 @@ namespace FundooNotes.Controllers
                 return BadRequest(new ResModel<LabelEntity> { Success = false, Message = "Something Went Wrong", Data = response });
             }
 
+        }
+
+        [Authorize]
+        [HttpGet]
+        [Route("GetAllLabel")]
+        public ActionResult GetAllLabel()
+        {
+            int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+            List<LabelEntity> labels = labelManager.GetAllLabels(userId);
+            if (labels.Count!=0)
+            {
+                return Ok(new ResModel<List<LabelEntity>> { Success = true, Message = "Label Fetched Successfully", Data = labels });
+            }
+            else
+            {
+                return BadRequest(new ResModel<List<LabelEntity>> { Success = false, Message = "Something Went Wrong", Data = labels });
+            }
         }
 
         [Authorize]

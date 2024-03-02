@@ -38,12 +38,16 @@ namespace Repository_Layer.Services
             }
         }
 
+        public List<LabelEntity> GetAllLabels(int userId)
+        {
+            return context.LabelTable.Where(a=>a.UserId==userId).ToList();
+        }
 
         public LabelEntity EditLabel(int userId, string labelName, int LabelId)
         {
             try
             {
-                var filteredUser = context.LabelTable.FirstOrDefault(a => a.UserId == userId);
+                var filteredUser = context.LabelTable.Where(a => a.UserId == userId);
                 if (filteredUser != null)
                 {
                     var label = context.LabelTable.SingleOrDefault(b => b.LabelId == LabelId);
@@ -68,7 +72,7 @@ namespace Repository_Layer.Services
         {
             try
             {
-                var filteredUser = context.LabelTable.FirstOrDefault(a=>a.UserId == userId);
+                var filteredUser = context.LabelTable.Where(a=>a.UserId == userId);
                 if (filteredUser != null)
                 {
                     var label = context.LabelTable.SingleOrDefault(a => a.LabelId == LabelId);

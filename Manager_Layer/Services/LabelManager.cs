@@ -27,6 +27,11 @@ namespace Manager_Layer.Services
         {
             return repository.DeleteLabel(userId, LabelId);
         }
+        public List<LabelEntity> GetAllLabels(int userId)
+        {
+            return repository.GetAllLabels(userId);
+        }
+
 
 
 
