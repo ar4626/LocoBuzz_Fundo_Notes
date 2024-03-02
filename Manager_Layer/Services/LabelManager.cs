@@ -23,6 +23,11 @@ namespace Manager_Layer.Services
         {
             return repository.EditLabel(userId, labelName, LabelId);
         }
+        public bool DeleteLabel(int userId, int LabelId)
+        {
+            return repository.DeleteLabel(userId, LabelId);
+        }
+
 
 
     }

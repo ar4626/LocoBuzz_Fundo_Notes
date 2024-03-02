@@ -38,6 +38,7 @@ namespace Repository_Layer.Services
             }
         }
 
+
         public LabelEntity EditLabel(int userId, string labelName, int LabelId)
         {
             try
@@ -54,6 +55,30 @@ namespace Repository_Layer.Services
                         return label;
                     }
                     else { return null; }
+                }
+                throw new Exception("Label Doesn't Exist");
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public bool DeleteLabel(int userId, int LabelId)
+        {
+            try
+            {
+                var filteredUser = context.LabelTable.FirstOrDefault(a=>a.UserId == userId);
+                if (filteredUser != null)
+                {
+                    var label = context.LabelTable.SingleOrDefault(a => a.LabelId == LabelId);
+                    if (label != null)
+                    {
+                        context.LabelTable.Remove(label);
+                        context.SaveChanges();
+                        return true;
+                    }
+                    else { return false; }
                 }
                 throw new Exception("Label Doesn't Exist");
             }

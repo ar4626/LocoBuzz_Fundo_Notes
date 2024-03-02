@@ -54,5 +54,23 @@ namespace FundooNotes.Controllers
 
             }
         }
+
+        [Authorize]
+        [HttpDelete]
+        [Route("DeleteLabel")]
+        public ActionResult EditLabel(int labelId)
+        {
+            int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+            var response = labelManager.DeleteLabel(userId, labelId);
+            if (response == true)
+            {
+                return Ok(new ResModel<bool> { Success = true, Message = "Label Deleted Successfully", Data = response });
+            }
+            else
+            {
+                return BadRequest(new ResModel<bool> { Success = false, Message = "Something Went Wrong", Data = response });
+
+            }
+        }
     }
 }
