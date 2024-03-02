@@ -37,5 +37,30 @@ namespace Repository_Layer.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        public LabelEntity EditLabel(int userId, string labelName, int LabelId)
+        {
+            try
+            {
+                var filteredUser = context.LabelTable.FirstOrDefault(a => a.UserId == userId);
+                if (filteredUser != null)
+                {
+                    var label = context.LabelTable.SingleOrDefault(b => b.LabelId == LabelId);
+                    if(label != null)
+                    {
+                        label.LabelName = labelName;
+                        context.Update(label);
+                        context.SaveChanges();
+                        return label;
+                    }
+                    else { return null; }
+                }
+                throw new Exception("Label Doesn't Exist");
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

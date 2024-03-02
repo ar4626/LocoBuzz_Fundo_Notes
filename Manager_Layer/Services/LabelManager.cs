@@ -19,6 +19,11 @@ namespace Manager_Layer.Services
         {
             return repository.AddLabel(userId, labelName, NoteId);
         }
+        public LabelEntity EditLabel(int userId, string labelName, int LabelId)
+        {
+            return repository.EditLabel(userId, labelName, LabelId);
+        }
+
 
     }
 }

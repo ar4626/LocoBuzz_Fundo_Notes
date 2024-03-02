@@ -36,5 +36,23 @@ namespace FundooNotes.Controllers
             }
 
         }
+
+        [Authorize]
+        [HttpPut]
+        [Route("EditLabel")]
+        public ActionResult EditLabel(int labelId, string labelName)
+        {
+            int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+            var response = labelManager.EditLabel(userId, labelName,labelId);
+            if (response!=null)
+            {
+                return Ok(new ResModel<LabelEntity> { Success = true, Message = "Label Updated Successfully", Data = response });
+            }
+            else
+            {
+                return BadRequest(new ResModel<LabelEntity> { Success = false, Message = "Something Went Wrong", Data = response });
+
+            }
+        }
     }
 }

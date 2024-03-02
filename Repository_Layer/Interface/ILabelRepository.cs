@@ -8,6 +8,8 @@ namespace Repository_Layer.Interface
     public interface ILabelRepository
     {
         public LabelEntity AddLabel(int userId, string labelName, int NoteId);
+        public LabelEntity EditLabel(int userId, string labelName, int LabelId);
+
 
     }
 }

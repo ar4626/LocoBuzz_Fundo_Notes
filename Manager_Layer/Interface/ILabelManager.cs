@@ -8,6 +8,8 @@ namespace Manager_Layer.Interface
     public interface ILabelManager
     {
         public LabelEntity AddLabel(int userId, string labelName, int NoteId);
+        public LabelEntity EditLabel(int userId, string labelName, int LabelId);
+
 
     }
 }
