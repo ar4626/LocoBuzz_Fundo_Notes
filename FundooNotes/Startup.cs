@@ -45,6 +45,8 @@ namespace FundooNotes
             services.AddTransient<INoteManager, NoteManager>();
             services.AddTransient<ILabelManager, LabelManager>();
             services.AddTransient<ILabelRepository, LabelRepository>();
+            services.AddTransient<ICollabManager, CollabManager>();
+            services.AddTransient<ICollabRepository, CollabRepository>();
 
 
             //RabbitMQ
