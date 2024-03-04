@@ -20,9 +20,9 @@ namespace Manager_Layer.Services
         {
             return repository.CreateCollab(userId, noteId, email);
         }
-        public bool RemoveCollab(int noteId, string email)
+        public bool RemoveCollab(int collabId)
         {
-            return repository.RemoveCollab(noteId, email);
+            return repository.RemoveCollab(collabId);
         }
 
 

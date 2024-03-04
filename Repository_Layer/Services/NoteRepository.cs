@@ -63,6 +63,7 @@ namespace Repository_Layer.Services
                     NoteEntity note = new NoteEntity();
                     note.Title = Checknote.Title;
                     note.Description = Checknote.Description;
+                    note.NoteId = colab.NoteId;
                     collabList.Add(note);
                 }
                 return collabList;

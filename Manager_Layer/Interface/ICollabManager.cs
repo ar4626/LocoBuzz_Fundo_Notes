@@ -8,7 +8,7 @@ namespace Manager_Layer.Interface
     public interface ICollabManager
     {
         public CollabEntity CreateCollab(int userId, int noteId, string email);
-        public bool RemoveCollab(int noteId, string email);
+        public bool RemoveCollab(int collabId);
 
     }
 }

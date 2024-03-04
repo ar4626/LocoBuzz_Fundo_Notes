@@ -1,4 +1,5 @@
 ﻿using Common_Layer.ResponseModel;
+using Common_Layer.Utility;
 using Manager_Layer.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -37,12 +38,12 @@ namespace FundooNotes.Controllers
 
         [HttpPut]
         [Route("RemoveCollab")]
-        public ActionResult RemoveCollab(int noteId, string email)
+        public ActionResult RemoveCollab(int collabId)
         {
-            var response = collabManager.RemoveCollab(noteId, email);
+            var response = collabManager.RemoveCollab(collabId);
             if(response!=null )
             {
-                return Ok(new ResModel<bool> { Success = true, Message = $"Collab Removed Successfully with {email}", Data = response });
+                return Ok(new ResModel<bool> { Success = true, Message = $"Collab Removed Successfully ", Data = response });
             }
 
             return BadRequest(new ResModel<bool> { Success = false, Message = "Something Went Wrong", Data = response });

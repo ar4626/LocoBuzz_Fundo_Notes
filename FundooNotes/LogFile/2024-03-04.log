@@ -533,3 +533,38 @@ WHERE [n].[NoteId] = @__colab_NoteId_0
 2024-03-04 14:34:06.0751 INFO Executed endpoint 'FundooNotes.Controllers.NoteController.GetAllNotes (FundooNotes)'
 2024-03-04 14:34:06.0751 DEBUG 'FundooContext' disposed.
 2024-03-04 14:34:06.0751 INFO Request finished in 316.5656ms 200 application/json; charset=utf-8
+2024-03-04 15:10:09.9366 DEBUG Hosting starting
+2024-03-04 15:10:10.1467 INFO User profile is available. Using 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-04 15:10:10.1534 DEBUG Starting host: rabbitmq://localhost/
+2024-03-04 15:10:10.1804 DEBUG Reading data from file 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys\key-da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e.xml'.
+2024-03-04 15:10:10.1846 DEBUG Connect: guest@localhost:5672/
+2024-03-04 15:10:10.1846 DEBUG Found key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e}.
+2024-03-04 15:10:10.1846 DEBUG Considering key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} with expiration date 2024-05-26 14:10:19Z as default key.
+2024-03-04 15:10:10.2090 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-04 15:10:10.2090 DEBUG Decrypting secret element using Windows DPAPI.
+2024-03-04 15:10:10.2090 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-04 15:10:10.2090 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-03-04 15:10:10.2152 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-03-04 15:10:10.2152 DEBUG Using key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} as the default key.
+2024-03-04 15:10:10.2152 DEBUG Key ring with default key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} was loaded during application startup.
+2024-03-04 15:10:10.2378 DEBUG Connected: guest@localhost:5672/ (address: amqp://localhost:5672, local: 50988)
+2024-03-04 15:10:10.3016 DEBUG Loaded hosting startup assembly FundooNotes
+2024-03-04 15:10:10.3016 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-03-04 15:10:10.3016 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-03-04 15:10:10.3016 INFO Application started. Press Ctrl+C to shut down.
+2024-03-04 15:10:10.3016 INFO Hosting environment: Development
+2024-03-04 15:10:10.3016 INFO Content root path: F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes
+2024-03-04 15:10:10.3016 DEBUG Hosting started
+2024-03-04 15:10:10.3173 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/index.html  
+2024-03-04 15:10:10.3687 DEBUG Wildcard detected, all requests with hosts will be allowed.
+2024-03-04 15:10:10.3891 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-04 15:10:10.4237 DEBUG Response markup is scheduled to include browser refresh script injection.
+2024-03-04 15:10:10.4417 DEBUG Response markup was updated to include browser refresh script injection.
+2024-03-04 15:10:10.4417 INFO Request finished in 126.6049ms 200 text/html;charset=utf-8
+2024-03-04 15:10:10.4535 INFO Request starting HTTP/2.0 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js  
+2024-03-04 15:10:10.4535 INFO Request finished in 3.1324ms 200 application/javascript; charset=utf-8
+2024-03-04 15:10:10.4827 INFO Request starting HTTP/2.0 GET https://localhost:44352/_vs/browserLink  
+2024-03-04 15:10:10.5145 INFO Request finished in 31.748ms 200 text/javascript; charset=UTF-8
+2024-03-04 15:10:10.9705 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/v1/swagger.json  
+2024-03-04 15:10:10.9705 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-04 15:10:11.1155 INFO Request finished in 145.0534ms 200 application/json;charset=utf-8
