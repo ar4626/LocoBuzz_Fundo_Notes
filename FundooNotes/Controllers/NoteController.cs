@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Repository_Layer.Entity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FundooNotes.Controllers
 {
@@ -54,14 +55,18 @@ namespace FundooNotes.Controllers
             try
             {
                 int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                string email = User.FindFirst("Email").Value;
                 List<NoteEntity> noteList = noteManager.GetAllNotes(userId);
+                List<NoteEntity> collabList = noteManager.GetCollabNotes(email);
+                List<NoteEntity> mergedList = noteList.Concat(collabList).ToList();
+
                 if (noteList.Count==0)
                 {
                     return BadRequest(new ResModel<List<NoteEntity>> { Success = false, Message = "No Notes are present for the User", Data = null });
                 }
                 else
                 {
-                    return Ok(new ResModel<List<NoteEntity>> { Success = true, Message = "Notes Fetched", Data = noteList });
+                    return Ok(new ResModel<List<NoteEntity>> { Success = true, Message = "Notes Fetched", Data = mergedList });
                 }
 
             }

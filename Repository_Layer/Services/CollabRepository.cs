@@ -38,5 +38,18 @@ namespace Repository_Layer.Services
             context.SaveChanges();
             return entity;
         }
+
+        public bool RemoveCollab (int noteId, string email)
+        {
+            var note = context.CollabTable.FirstOrDefault(a=>a.NoteId==noteId && a.CollabEmail==email);
+            if (note != null)
+            {
+                note.IsRemove = true;
+                context.Update(note);
+                context.SaveChanges();
+                return (true);
+            }
+            throw new Exception ("Request Failed");
+        }
     }
 }

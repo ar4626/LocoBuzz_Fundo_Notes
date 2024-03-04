@@ -51,6 +51,25 @@ namespace Repository_Layer.Services
             throw new Exception("User Not Authorised");
 
         }
+        public List<NoteEntity> GetCollabNotes(string email)
+        {
+            var filterNote = context.CollabTable.Where(a=>a.CollabEmail == email).ToList();
+            if (filterNote != null)
+            {
+                List<NoteEntity> collabList = new List<NoteEntity>();
+                foreach (var colab in filterNote)
+                {
+                    var Checknote = context.NoteTable.FirstOrDefault(b => b.NoteId == colab.NoteId);
+                    NoteEntity note = new NoteEntity();
+                    note.Title = Checknote.Title;
+                    note.Description = Checknote.Description;
+                    collabList.Add(note);
+                }
+                return collabList;
+            }
+            else
+                return null;
+        }
 
         public NoteEntity UpdateNoteByNoteId(int noteId, UpdateNoteModel model, int userId)
         {

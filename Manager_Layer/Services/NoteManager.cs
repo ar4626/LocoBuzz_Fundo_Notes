@@ -26,6 +26,11 @@ namespace Manager_Layer.Services
         {
             return repository.GetAllNotes(userId);
         }
+        public List<NoteEntity> GetCollabNotes(string email)
+        {
+            return repository.GetCollabNotes(email);
+        }
+
         public NoteEntity UpdateNoteByNoteId(int noteId, UpdateNoteModel model, int UserId)
         {
             return repository.UpdateNoteByNoteId(noteId, model, UserId);

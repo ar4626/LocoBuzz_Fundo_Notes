@@ -34,5 +34,19 @@ namespace FundooNotes.Controllers
             return BadRequest(new ResModel<CollabEntity> { Success = false, Message = "Something Went Wrong", Data = response });
 
         }
+
+        [HttpPut]
+        [Route("RemoveCollab")]
+        public ActionResult RemoveCollab(int noteId, string email)
+        {
+            var response = collabManager.RemoveCollab(noteId, email);
+            if(response!=null )
+            {
+                return Ok(new ResModel<bool> { Success = true, Message = $"Collab Removed Successfully with {email}", Data = response });
+            }
+
+            return BadRequest(new ResModel<bool> { Success = false, Message = "Something Went Wrong", Data = response });
+
+        }
     }
 }

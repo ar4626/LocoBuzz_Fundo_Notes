@@ -12,6 +12,8 @@ namespace Repository_Layer.Interface
 
         public List<NoteEntity> GetAllNotes(int userId);
         public NoteEntity UpdateNoteByNoteId(int noteId, UpdateNoteModel model,int userId);
+        public List<NoteEntity> GetCollabNotes(string email);
+
         public bool IsTrash(int noteId, int userId);
         public bool IsArchive(int noteId, int userId);
         public bool IsPin(int noteId, int userId);
