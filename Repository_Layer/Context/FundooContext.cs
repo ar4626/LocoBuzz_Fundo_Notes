@@ -15,5 +15,7 @@ namespace Repository_Layer.Context
         public DbSet<NoteEntity> NoteTable { get; set; }
 
         public DbSet<LabelEntity> LabelTable { get; set; }
+
+        public DbSet<CollabEntity> CollabTable { get; set; }
     }
 }
