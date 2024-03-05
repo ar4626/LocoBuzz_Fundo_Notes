@@ -43,12 +43,12 @@ namespace FundooNotes.Controllers
         public ActionResult GetAllLabel()
         {
             int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
-            List<LabelEntity> labels = labelManager.GetAllLabels(userId);
+            HashSet<LabelEntity> labels = labelManager.GetAllLabels(userId);
             if (labels.Count!=0)
             {
-                return Ok(new ResModel<List<LabelEntity>> { Success = true, Message = "Label Fetched Successfully", Data = labels });
+                return Ok(new ResModel<HashSet<LabelEntity>> { Success = true, Message = "Label Fetched Successfully", Data = labels });
             }
-            return BadRequest(new ResModel<List<LabelEntity>> { Success = false, Message = "Something Went Wrong", Data = labels });
+            return BadRequest(new ResModel<HashSet<LabelEntity>> { Success = false, Message = "Something Went Wrong", Data = labels });
         }
 
         [Authorize]

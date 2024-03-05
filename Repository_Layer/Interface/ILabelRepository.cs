@@ -10,7 +10,7 @@ namespace Repository_Layer.Interface
         public LabelEntity AddLabel(int userId, string labelName, int NoteId);
         public List<LabelEntity> EditLabel(int userId, string labelName, int LabelId);
         public bool DeleteLabel(int userId, int LabelId);
-        public List<LabelEntity> GetAllLabels(int userId);
+        public HashSet<LabelEntity> GetAllLabels(int userId);
 
 
 

@@ -55,7 +55,7 @@ namespace Repository_Layer.Services
                 context.SaveChanges();
                 return (true);
             }
-            throw new Exception ("Request Failed");
+            throw new Exception ("Request Failed No Collab with this collab ID");
         }
     }
 }

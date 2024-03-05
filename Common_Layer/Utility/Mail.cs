@@ -35,9 +35,24 @@ namespace Common_Layer.Utility
         {
             string FromEmail = "ar2646@srmist.edu.in";
             MailMessage Message = new MailMessage(FromEmail,ToEmail);
-            string mailBody = $"{name.ToUpper()} ({email}) shared a note with you. \n {Title.ToUpper()}";
-            Message.Subject = $"Note shared with you : '{Title}'";
-            Message.Body = mailBody.ToString();
+            string mailBody = $@"
+                <html>
+                <body>
+                    <p style='font-size: 16px; font-family: Arial, sans-serif;'>
+                        Hi {ToEmail.Split('@')[0]},<br/><br/>
+                        {name.ToUpper()} ({email}) shared a note with you.<br/><br/>
+                        <strong>{Title.ToUpper()}</strong><br/><br/>
+                        Click the link below to view the shared note:<br/>
+                        <a href='https://your-note-sharing-link.com'>View Shared Note</a><br/><br/>
+                        Best regards,<br/>
+                        Your Name
+                    </p>
+                </body>
+                </html>
+            ";
+
+            Message.Subject = $"Note shared with you: '{Title}'";
+            Message.Body = mailBody;
             Message.BodyEncoding = Encoding.UTF8;
             Message.IsBodyHtml = true;
 

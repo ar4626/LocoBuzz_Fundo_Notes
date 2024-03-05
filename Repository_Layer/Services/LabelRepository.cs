@@ -38,9 +38,9 @@ namespace Repository_Layer.Services
             }
         }
 
-        public List<LabelEntity> GetAllLabels(int userId)
+        public HashSet<LabelEntity> GetAllLabels(int userId)
         {
-            return context.LabelTable.Where(a=>a.UserId==userId).ToList();
+            return context.LabelTable.Where(a=>a.UserId==userId).ToHashSet();
         }
 
         public List<LabelEntity> EditLabel(int userId, string labelName, int LabelId)
