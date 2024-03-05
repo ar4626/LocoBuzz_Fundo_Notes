@@ -43,9 +43,8 @@ namespace Common_Layer.Utility
                         {name.ToUpper()} ({email}) shared a note with you.<br/><br/>
                         <strong>{Title.ToUpper()}</strong><br/><br/>
                         Click the link below to view the shared note:<br/>
-                        <a href='https://your-note-sharing-link.com'>View Shared Note</a><br/><br/>
+                        <a href='#'>View Shared Note</a><br/><br/>
                         Best regards,<br/>
-                        Your Name
                     </p>
                 </body>
                 </html>

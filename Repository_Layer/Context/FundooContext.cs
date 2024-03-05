@@ -17,5 +17,10 @@ namespace Repository_Layer.Context
         public DbSet<LabelEntity> LabelTable { get; set; }
 
         public DbSet<CollabEntity> CollabTable { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }

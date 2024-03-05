@@ -42,11 +42,15 @@ namespace Repository_Layer.Services
         public List<NoteEntity> GetAllNotes(int userId)
         {
             var filterUser = context.NoteTable.Where(x => x.UserId == userId);
+            var user = context.UserTable.FirstOrDefault(a=>a.UserId == userId);
             if(filterUser != null)
             {
                 List<NoteEntity> noteList = new List<NoteEntity>();
                 noteList = filterUser.Where(note => note.IsTrash == false && note.IsArchive == false).ToList();
-                return noteList;
+                List<NoteEntity> collabList = GetCollabNotes(user.Email);
+                List<NoteEntity> finalList = noteList.Concat(collabList).ToList();
+                return finalList;
+
             }
             throw new Exception("User Not Authorised");
 

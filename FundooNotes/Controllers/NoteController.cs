@@ -1,13 +1,19 @@
 ﻿using Common_Layer.RequestModel;
 using Common_Layer.ResponseModel;
+using GreenPipes.Caching;
 using Manager_Layer.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
 using Repository_Layer.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace FundooNotes.Controllers
 {
@@ -16,10 +22,16 @@ namespace FundooNotes.Controllers
     public class NoteController : ControllerBase
     {
         private readonly INoteManager noteManager;
+        private readonly IDistributedCache cache;
+        private readonly ILogger<UserController> logger;
 
-        public NoteController(INoteManager noteManager)
+
+
+        public NoteController(INoteManager noteManager, IDistributedCache cache, ILogger<UserController> logger)
         {
+            this.cache = cache;
             this.noteManager = noteManager;
+            this.logger = logger;
         }
 
         [Authorize]
@@ -50,17 +62,43 @@ namespace FundooNotes.Controllers
         [Authorize]
         [HttpGet]
         [Route ("GetAllNotes")]
-        public ActionResult GetAllNotes()
+        public async Task<ActionResult> GetAllNotes()
         {
             try
             {
                 int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
                 string email = User.FindFirst("Email").Value;
-                List<NoteEntity> noteList = noteManager.GetAllNotes(userId);
-                List<NoteEntity> collabList = noteManager.GetCollabNotes(email);
-                List<NoteEntity> mergedList = noteList.Concat(collabList).ToList();
+                
+                string cacheKey = userId.ToString();
+                // Trying to get data from the Redis cache
+                byte[] cachedData = await cache.GetAsync(cacheKey);
+                List<NoteEntity> mergedList = new List<NoteEntity>();
 
-                if (noteList.Count==0)
+                if (cachedData != null)
+                {
+                    // If the data is found in the cache, encode and deserialize cached data.
+                    var cachedDataString = Encoding.UTF8.GetString(cachedData);
+                    mergedList = JsonSerializer.Deserialize<List<NoteEntity>>(cachedDataString);
+                }
+                else
+                {
+                    // If the data is not found in the cache, then fetch data from database
+                    mergedList = noteManager.GetAllNotes(userId);
+
+                    // Serializing the data
+                    string cachedDataString = JsonSerializer.Serialize(mergedList);
+                    var dataToCache = Encoding.UTF8.GetBytes(cachedDataString);
+
+                    // Setting up the cache options
+                    DistributedCacheEntryOptions options = new DistributedCacheEntryOptions()
+                        .SetAbsoluteExpiration(DateTime.Now.AddMinutes(5))
+                        .SetSlidingExpiration(TimeSpan.FromMinutes(3));
+
+                    // Add the data into the cache
+                    await cache.SetAsync(cacheKey, dataToCache, options);
+                }
+
+                if (mergedList.Count==0)
                 {
                     return BadRequest(new ResModel<List<NoteEntity>> { Success = false, Message = "No Notes are present for the User", Data = null });
                 }
@@ -72,6 +110,7 @@ namespace FundooNotes.Controllers
             }
             catch (Exception ex)
             {
+                logger.LogError(ex, "An error occurred while processing GetAllNotes.");
                 return BadRequest(new ResModel<List<NoteEntity>> { Success = false, Message = ex.Message, Data = null });
             }
 

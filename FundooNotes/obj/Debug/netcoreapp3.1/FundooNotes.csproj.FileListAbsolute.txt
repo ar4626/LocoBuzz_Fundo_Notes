@@ -79,3 +79,16 @@ F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\CloudinaryDo
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.dll
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Redis.dll
+F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes\bin\Debug\netcoreapp3.1\StackExchange.Redis.StrongName.dll

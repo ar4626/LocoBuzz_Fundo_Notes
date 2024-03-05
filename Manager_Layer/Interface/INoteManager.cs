@@ -10,8 +10,6 @@ namespace Manager_Layer.Interface
     {
         public NoteEntity AddNotes(AddNoteModel model, int userId);
         public List<NoteEntity> GetAllNotes(int userId);
-        public List<NoteEntity> GetCollabNotes(string email);
-
         public NoteEntity UpdateNoteByNoteId(int noteId, UpdateNoteModel model, int UserId);
         public bool IsTrash(int noteId, int userId);
         public bool IsArchive(int noteId, int userId);
