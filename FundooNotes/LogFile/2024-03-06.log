@@ -1,0 +1,686 @@
+2024-03-06 10:34:24.7052 DEBUG Hosting starting
+2024-03-06 10:34:25.8560 INFO User profile is available. Using 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 10:34:25.8560 DEBUG Starting host: rabbitmq://localhost/
+2024-03-06 10:34:25.9005 DEBUG Reading data from file 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys\key-da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e.xml'.
+2024-03-06 10:34:25.9037 DEBUG Connect: guest@localhost:5672/
+2024-03-06 10:34:25.9037 DEBUG Found key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e}.
+2024-03-06 10:34:25.9295 DEBUG Considering key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} with expiration date 2024-05-26 14:10:19Z as default key.
+2024-03-06 10:34:25.9577 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-06 10:34:25.9577 DEBUG Decrypting secret element using Windows DPAPI.
+2024-03-06 10:34:25.9577 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-06 10:34:25.9657 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-03-06 10:34:25.9657 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-03-06 10:34:25.9657 DEBUG Using key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} as the default key.
+2024-03-06 10:34:25.9657 DEBUG Key ring with default key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} was loaded during application startup.
+2024-03-06 10:34:26.0066 DEBUG Connected: guest@localhost:5672/ (address: amqp://localhost:5672, local: 51970)
+2024-03-06 10:34:26.1955 DEBUG Loaded hosting startup assembly FundooNotes
+2024-03-06 10:34:26.1955 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-03-06 10:34:26.1955 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-03-06 10:34:26.1955 INFO Application started. Press Ctrl+C to shut down.
+2024-03-06 10:34:26.1955 INFO Hosting environment: Development
+2024-03-06 10:34:26.1955 INFO Content root path: F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes
+2024-03-06 10:34:26.1955 DEBUG Hosting started
+2024-03-06 10:34:26.2251 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/index.html  
+2024-03-06 10:34:26.8437 DEBUG Wildcard detected, all requests with hosts will be allowed.
+2024-03-06 10:34:26.9501 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:34:27.0091 DEBUG Response markup is scheduled to include browser refresh script injection.
+2024-03-06 10:34:27.0457 DEBUG Response markup was updated to include browser refresh script injection.
+2024-03-06 10:34:27.0457 INFO Request finished in 825.3381ms 200 text/html;charset=utf-8
+2024-03-06 10:34:27.1228 INFO Request starting HTTP/2.0 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js  
+2024-03-06 10:34:27.1228 INFO Request finished in 2.4896ms 200 application/javascript; charset=utf-8
+2024-03-06 10:34:27.2574 INFO Request starting HTTP/2.0 GET https://localhost:44352/_vs/browserLink  
+2024-03-06 10:34:27.3202 INFO Request finished in 62.7544ms 200 text/javascript; charset=UTF-8
+2024-03-06 10:34:28.2864 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/v1/swagger.json  
+2024-03-06 10:34:28.2864 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:34:28.4569 INFO Request finished in 170.5043ms 200 application/json;charset=utf-8
+2024-03-06 10:35:10.0752 INFO Request starting HTTP/2.0 PUT https://localhost:44352/api/Review/Update?email=finalcall1194%40gmail.com&fname=Harsh&lname=Singh  0
+2024-03-06 10:35:10.0752 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:35:10.0752 DEBUG PUT requests are not supported
+2024-03-06 10:35:10.1086 DEBUG 1 candidate(s) found for the request path '/api/Review/Update'
+2024-03-06 10:35:10.1086 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)' with route pattern 'api/Review/Update' is valid for the request path '/api/Review/Update'
+2024-03-06 10:35:10.1086 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:35:10.1086 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:35:10.1086 DEBUG Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+2024-03-06 10:35:10.1536 INFO Route matched with {action = "updateFnameLname", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult updateFnameLname(System.String, System.String, System.String) on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:35:10.1536 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:35:10.1536 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:35:10.1536 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:35:10.1536 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:35:10.1536 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:35:10.1536 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:35:10.1536 INFO Executed action FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes) in 7.2897ms
+2024-03-06 10:35:10.1536 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:35:10.1672 ERROR An unhandled exception has occurred while executing the request.
+2024-03-06 10:35:10.5659 INFO Request finished in 492.0934ms 500 text/plain
+2024-03-06 10:35:51.3259 DEBUG Hosting starting
+2024-03-06 10:35:51.5799 INFO User profile is available. Using 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 10:35:51.5799 DEBUG Starting host: rabbitmq://localhost/
+2024-03-06 10:35:51.6174 DEBUG Reading data from file 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys\key-da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e.xml'.
+2024-03-06 10:35:51.6232 DEBUG Connect: guest@localhost:5672/
+2024-03-06 10:35:51.6232 DEBUG Found key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e}.
+2024-03-06 10:35:51.6232 DEBUG Considering key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} with expiration date 2024-05-26 14:10:19Z as default key.
+2024-03-06 10:35:51.6668 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-06 10:35:51.6694 DEBUG Decrypting secret element using Windows DPAPI.
+2024-03-06 10:35:51.6694 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-06 10:35:51.6694 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-03-06 10:35:51.6694 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-03-06 10:35:51.6694 DEBUG Using key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} as the default key.
+2024-03-06 10:35:51.6694 DEBUG Key ring with default key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} was loaded during application startup.
+2024-03-06 10:35:51.6978 DEBUG Connected: guest@localhost:5672/ (address: amqp://localhost:5672, local: 52005)
+2024-03-06 10:35:51.7798 DEBUG Loaded hosting startup assembly FundooNotes
+2024-03-06 10:35:51.7798 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-03-06 10:35:51.7798 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-03-06 10:35:51.7798 INFO Application started. Press Ctrl+C to shut down.
+2024-03-06 10:35:51.7798 INFO Hosting environment: Development
+2024-03-06 10:35:51.7798 INFO Content root path: F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes
+2024-03-06 10:35:51.7798 DEBUG Hosting started
+2024-03-06 10:35:51.7973 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/index.html  
+2024-03-06 10:35:51.8502 DEBUG Wildcard detected, all requests with hosts will be allowed.
+2024-03-06 10:35:51.8683 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:35:51.9015 DEBUG Response markup is scheduled to include browser refresh script injection.
+2024-03-06 10:35:51.9334 DEBUG Response markup was updated to include browser refresh script injection.
+2024-03-06 10:35:51.9356 INFO Request finished in 139.7456ms 200 text/html;charset=utf-8
+2024-03-06 10:35:51.9356 INFO Request starting HTTP/2.0 GET https://localhost:44352/_vs/browserLink  
+2024-03-06 10:35:51.9356 INFO Request starting HTTP/2.0 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js  
+2024-03-06 10:35:51.9356 INFO Request finished in 3.9713ms 200 application/javascript; charset=utf-8
+2024-03-06 10:35:51.9764 INFO Request finished in 34.4792ms 200 text/javascript; charset=UTF-8
+2024-03-06 10:35:52.3412 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/v1/swagger.json  
+2024-03-06 10:35:52.3412 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:35:52.5261 INFO Request finished in 184.9499ms 200 application/json;charset=utf-8
+2024-03-06 10:36:15.2052 INFO Request starting HTTP/2.0 PUT https://localhost:44352/api/Review/Update?email=finalcall1194%40gmail.com&fname=Harsh&lname=Singh  0
+2024-03-06 10:36:15.2052 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:36:15.2052 DEBUG PUT requests are not supported
+2024-03-06 10:36:15.2348 DEBUG 1 candidate(s) found for the request path '/api/Review/Update'
+2024-03-06 10:36:15.2348 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)' with route pattern 'api/Review/Update' is valid for the request path '/api/Review/Update'
+2024-03-06 10:36:15.2348 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:36:15.2348 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:36:15.2348 DEBUG Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+2024-03-06 10:36:15.2702 INFO Route matched with {action = "updateFnameLname", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult updateFnameLname(System.String, System.String, System.String) on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:36:15.2702 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:36:15.2702 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:36:15.2702 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:36:15.2702 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:36:15.2702 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:36:15.2702 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:36:15.5821 DEBUG An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-06 10:36:15.6003 DEBUG Executed controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:36:15.6063 DEBUG Attempting to bind parameter 'email' of type 'System.String' ...
+2024-03-06 10:36:15.6063 DEBUG Attempting to bind parameter 'email' of type 'System.String' using the name 'email' in request data ...
+2024-03-06 10:36:15.6063 DEBUG Done attempting to bind parameter 'email' of type 'System.String'.
+2024-03-06 10:36:15.6063 DEBUG Done attempting to bind parameter 'email' of type 'System.String'.
+2024-03-06 10:36:15.6063 DEBUG Attempting to validate the bound parameter 'email' of type 'System.String' ...
+2024-03-06 10:36:15.6063 DEBUG Done attempting to validate the bound parameter 'email' of type 'System.String'.
+2024-03-06 10:36:15.6063 DEBUG Attempting to bind parameter 'fname' of type 'System.String' ...
+2024-03-06 10:36:15.6063 DEBUG Attempting to bind parameter 'fname' of type 'System.String' using the name 'fname' in request data ...
+2024-03-06 10:36:15.6063 DEBUG Done attempting to bind parameter 'fname' of type 'System.String'.
+2024-03-06 10:36:15.6063 DEBUG Done attempting to bind parameter 'fname' of type 'System.String'.
+2024-03-06 10:36:15.6063 DEBUG Attempting to validate the bound parameter 'fname' of type 'System.String' ...
+2024-03-06 10:36:15.6063 DEBUG Done attempting to validate the bound parameter 'fname' of type 'System.String'.
+2024-03-06 10:36:15.6063 DEBUG Attempting to bind parameter 'lname' of type 'System.String' ...
+2024-03-06 10:36:15.6063 DEBUG Attempting to bind parameter 'lname' of type 'System.String' using the name 'lname' in request data ...
+2024-03-06 10:36:15.6063 DEBUG Done attempting to bind parameter 'lname' of type 'System.String'.
+2024-03-06 10:36:15.6063 DEBUG Done attempting to bind parameter 'lname' of type 'System.String'.
+2024-03-06 10:36:15.6063 DEBUG Attempting to validate the bound parameter 'lname' of type 'System.String' ...
+2024-03-06 10:36:15.6063 DEBUG Done attempting to validate the bound parameter 'lname' of type 'System.String'.
+2024-03-06 10:36:16.0900 INFO Entity Framework Core 3.1.0 initialized 'FundooContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2024-03-06 10:36:16.2360 DEBUG queryContext => new QueryingEnumerable<UserEntity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, UserEntity>, 
+    Repository_Layer.Context.FundooContext, 
+    DiagnosticsLogger<Query>
+)
+    .SingleOrDefault()
+2024-03-06 10:36:16.2566 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:36:16.5401 DEBUG Created DbCommand for 'ExecuteReader' (281ms).
+2024-03-06 10:36:16.5473 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:16.7439 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:16.7558 DEBUG Executing DbCommand [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-03-06 10:36:16.8204 INFO Executed DbCommand (69ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-03-06 10:36:16.8527 DEBUG Context 'FundooContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-03-06 10:36:16.8709 DEBUG A data reader was disposed.
+2024-03-06 10:36:16.8709 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:16.8709 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:16.8709 DEBUG SaveChanges starting for 'FundooContext'.
+2024-03-06 10:36:16.8709 DEBUG DetectChanges starting for 'FundooContext'.
+2024-03-06 10:36:16.8879 DEBUG Unchanged 'UserEntity.LName' detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-03-06 10:36:16.8879 DEBUG An 'UserEntity' entity tracked by 'FundooContext' changed from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-03-06 10:36:16.8879 DEBUG DetectChanges completed for 'FundooContext'.
+2024-03-06 10:36:16.8879 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:16.8879 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:16.8879 DEBUG Beginning transaction with isolation level 'Unspecified'.
+2024-03-06 10:36:16.9084 DEBUG Began transaction with isolation level 'ReadCommitted'.
+2024-03-06 10:36:16.9386 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:36:16.9386 DEBUG Created DbCommand for 'ExecuteReader' (0ms).
+2024-03-06 10:36:16.9386 DEBUG Executing DbCommand [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [UserTable] SET [LName] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2024-03-06 10:36:16.9386 INFO Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [UserTable] SET [LName] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2024-03-06 10:36:16.9486 DEBUG A data reader was disposed.
+2024-03-06 10:36:16.9486 DEBUG Committing transaction.
+2024-03-06 10:36:16.9486 DEBUG Committing transaction.
+2024-03-06 10:36:16.9486 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:16.9486 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:16.9486 DEBUG Disposing transaction.
+2024-03-06 10:36:16.9486 DEBUG An 'UserEntity' entity tracked by 'FundooContext' changed from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-03-06 10:36:16.9486 DEBUG SaveChanges completed for 'FundooContext' with 1 entities written to the database.
+2024-03-06 10:36:16.9486 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-03-06 10:36:16.9486 DEBUG No information found on request to perform content negotiation.
+2024-03-06 10:36:16.9486 DEBUG Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-06 10:36:16.9486 DEBUG Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-06 10:36:16.9486 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-03-06 10:36:16.9486 INFO Executing ObjectResult, writing value of type 'Common_Layer.ResponseModel.ResModel`1[[Repository_Layer.Entity.UserEntity, Repository_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-06 10:36:16.9695 INFO Executed action FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes) in 1695.5741ms
+2024-03-06 10:36:16.9695 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:36:16.9695 DEBUG 'FundooContext' disposed.
+2024-03-06 10:36:16.9695 INFO Request finished in 1768.0023ms 200 application/json; charset=utf-8
+2024-03-06 10:36:38.9749 INFO Request starting HTTP/2.0 GET https://localhost:44352/api/Review/getUser?email=finalcall1194%40gmail.com  
+2024-03-06 10:36:38.9749 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:36:38.9749 DEBUG The request path  does not match the path filter
+2024-03-06 10:36:38.9802 DEBUG 1 candidate(s) found for the request path '/api/Review/getUser'
+2024-03-06 10:36:38.9802 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)' with route pattern 'api/Review/getUser' is valid for the request path '/api/Review/getUser'
+2024-03-06 10:36:38.9802 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:36:38.9802 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:36:38.9802 INFO Route matched with {action = "getuser", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult getuser(System.String) on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:36:38.9802 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:36:38.9802 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:36:38.9802 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:36:38.9802 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:36:38.9802 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:36:38.9802 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:36:38.9802 DEBUG Executed controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:36:38.9802 DEBUG Attempting to bind parameter 'email' of type 'System.String' ...
+2024-03-06 10:36:38.9802 DEBUG Attempting to bind parameter 'email' of type 'System.String' using the name 'email' in request data ...
+2024-03-06 10:36:38.9802 DEBUG Done attempting to bind parameter 'email' of type 'System.String'.
+2024-03-06 10:36:38.9802 DEBUG Done attempting to bind parameter 'email' of type 'System.String'.
+2024-03-06 10:36:38.9802 DEBUG Attempting to validate the bound parameter 'email' of type 'System.String' ...
+2024-03-06 10:36:38.9802 DEBUG Done attempting to validate the bound parameter 'email' of type 'System.String'.
+2024-03-06 10:36:39.0106 INFO Entity Framework Core 3.1.0 initialized 'FundooContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2024-03-06 10:36:39.0155 DEBUG queryContext => new QueryingEnumerable<UserEntity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, UserEntity>, 
+    Repository_Layer.Context.FundooContext, 
+    DiagnosticsLogger<Query>
+)
+2024-03-06 10:36:39.0155 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:36:39.0155 DEBUG Created DbCommand for 'ExecuteReader' (0ms).
+2024-03-06 10:36:39.0155 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:39.0155 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:39.0155 DEBUG Executing DbCommand [Parameters=[@__fname_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[FName] = @__fname_0
+2024-03-06 10:36:39.0155 INFO Executed DbCommand (3ms) [Parameters=[@__fname_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[FName] = @__fname_0
+2024-03-06 10:36:39.0155 DEBUG A data reader was disposed.
+2024-03-06 10:36:39.0155 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:39.0155 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:36:39.0155 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-03-06 10:36:39.0155 DEBUG No information found on request to perform content negotiation.
+2024-03-06 10:36:39.0155 DEBUG Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-06 10:36:39.0155 DEBUG Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-06 10:36:39.0155 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-03-06 10:36:39.0155 INFO Executing ObjectResult, writing value of type 'Common_Layer.ResponseModel.ResModel`1[[System.Collections.Generic.List`1[[Repository_Layer.Entity.UserEntity, Repository_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-06 10:36:39.0155 INFO Executed action FundooNotes.Controllers.ReviewController.getuser (FundooNotes) in 36.5536ms
+2024-03-06 10:36:39.0155 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:36:39.0155 DEBUG 'FundooContext' disposed.
+2024-03-06 10:36:39.0155 INFO Request finished in 47.465ms 200 application/json; charset=utf-8
+2024-03-06 10:37:01.4513 INFO Request starting HTTP/2.0 GET https://localhost:44352/api/Review/getCount  
+2024-03-06 10:37:01.4513 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:37:01.4513 DEBUG The request path  does not match the path filter
+2024-03-06 10:37:01.4513 DEBUG 1 candidate(s) found for the request path '/api/Review/getCount'
+2024-03-06 10:37:01.4513 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)' with route pattern 'api/Review/getCount' is valid for the request path '/api/Review/getCount'
+2024-03-06 10:37:01.4513 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:37:01.4513 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:37:01.4513 INFO Route matched with {action = "getCount", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult getCount(System.String) on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:37:01.4513 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:37:01.4513 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:37:01.4513 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:37:01.4513 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:37:01.4513 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:37:01.4513 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:37:01.4513 DEBUG Executed controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:37:01.4513 DEBUG Attempting to bind parameter 'email' of type 'System.String' ...
+2024-03-06 10:37:01.4513 DEBUG Could not find a value in the request with name '' for binding parameter 'email' of type 'System.String'.
+2024-03-06 10:37:01.4513 DEBUG Done attempting to bind parameter 'email' of type 'System.String'.
+2024-03-06 10:37:01.4513 DEBUG Done attempting to bind parameter 'email' of type 'System.String'.
+2024-03-06 10:37:01.4513 DEBUG Attempting to validate the bound parameter 'email' of type 'System.String' ...
+2024-03-06 10:37:01.4513 DEBUG Done attempting to validate the bound parameter 'email' of type 'System.String'.
+2024-03-06 10:37:01.4709 INFO Entity Framework Core 3.1.0 initialized 'FundooContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2024-03-06 10:37:01.4801 DEBUG queryContext => new QueryingEnumerable<int>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, int>, 
+    Repository_Layer.Context.FundooContext, 
+    DiagnosticsLogger<Query>
+)
+    .Single()
+2024-03-06 10:37:01.4801 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:37:01.4801 DEBUG Created DbCommand for 'ExecuteReader' (0ms).
+2024-03-06 10:37:01.4801 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:37:01.4801 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:37:01.4801 DEBUG Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [UserTable] AS [u]
+2024-03-06 10:37:01.4801 INFO Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [UserTable] AS [u]
+2024-03-06 10:37:01.4801 DEBUG A data reader was disposed.
+2024-03-06 10:37:01.4801 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:37:01.4801 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:37:01.4801 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-03-06 10:37:01.4801 DEBUG No information found on request to perform content negotiation.
+2024-03-06 10:37:01.4801 DEBUG Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-06 10:37:01.4801 DEBUG Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-06 10:37:01.4801 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-03-06 10:37:01.4801 INFO Executing ObjectResult, writing value of type 'Common_Layer.ResponseModel.ResModel`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-06 10:37:01.4801 INFO Executed action FundooNotes.Controllers.ReviewController.getCount (FundooNotes) in 29.559ms
+2024-03-06 10:37:01.4801 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:37:01.4801 DEBUG 'FundooContext' disposed.
+2024-03-06 10:37:01.4801 INFO Request finished in 40.3097ms 200 application/json; charset=utf-8
+2024-03-06 10:38:02.3869 DEBUG Hosting starting
+2024-03-06 10:38:02.6418 INFO User profile is available. Using 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 10:38:02.6418 DEBUG Starting host: rabbitmq://localhost/
+2024-03-06 10:38:02.6754 DEBUG Reading data from file 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys\key-da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e.xml'.
+2024-03-06 10:38:02.6754 DEBUG Connect: guest@localhost:5672/
+2024-03-06 10:38:02.6754 DEBUG Found key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e}.
+2024-03-06 10:38:02.6921 DEBUG Considering key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} with expiration date 2024-05-26 14:10:19Z as default key.
+2024-03-06 10:38:02.7068 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-06 10:38:02.7068 DEBUG Decrypting secret element using Windows DPAPI.
+2024-03-06 10:38:02.7068 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-06 10:38:02.7146 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-03-06 10:38:02.7146 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-03-06 10:38:02.7146 DEBUG Using key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} as the default key.
+2024-03-06 10:38:02.7146 DEBUG Key ring with default key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} was loaded during application startup.
+2024-03-06 10:38:02.7520 DEBUG Connected: guest@localhost:5672/ (address: amqp://localhost:5672, local: 52041)
+2024-03-06 10:38:02.8244 DEBUG Loaded hosting startup assembly FundooNotes
+2024-03-06 10:38:02.8244 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-03-06 10:38:02.8244 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-03-06 10:38:02.8244 INFO Application started. Press Ctrl+C to shut down.
+2024-03-06 10:38:02.8244 INFO Hosting environment: Development
+2024-03-06 10:38:02.8244 INFO Content root path: F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes
+2024-03-06 10:38:02.8244 DEBUG Hosting started
+2024-03-06 10:38:02.8411 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/index.html  
+2024-03-06 10:38:02.8953 DEBUG Wildcard detected, all requests with hosts will be allowed.
+2024-03-06 10:38:02.9136 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:38:02.9481 DEBUG Response markup is scheduled to include browser refresh script injection.
+2024-03-06 10:38:02.9747 DEBUG Response markup was updated to include browser refresh script injection.
+2024-03-06 10:38:02.9747 INFO Request finished in 137.7029ms 200 text/html;charset=utf-8
+2024-03-06 10:38:02.9906 INFO Request starting HTTP/2.0 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js  
+2024-03-06 10:38:02.9906 INFO Request starting HTTP/2.0 GET https://localhost:44352/_vs/browserLink  
+2024-03-06 10:38:02.9906 INFO Request finished in 4.1269ms 200 application/javascript; charset=utf-8
+2024-03-06 10:38:03.0262 INFO Request finished in 35.6216ms 200 text/javascript; charset=UTF-8
+2024-03-06 10:38:03.6487 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/v1/swagger.json  
+2024-03-06 10:38:03.6487 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:38:03.7891 INFO Request finished in 140.3369ms 200 application/json;charset=utf-8
+2024-03-06 10:38:21.4335 INFO Request starting HTTP/2.0 GET https://localhost:44352/api/Review/getUser?fname=Ankit  
+2024-03-06 10:38:21.4485 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:38:21.4485 DEBUG The request path  does not match the path filter
+2024-03-06 10:38:21.4791 DEBUG 1 candidate(s) found for the request path '/api/Review/getUser'
+2024-03-06 10:38:21.4814 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)' with route pattern 'api/Review/getUser' is valid for the request path '/api/Review/getUser'
+2024-03-06 10:38:21.4814 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:38:21.4814 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:38:21.4814 DEBUG Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+2024-03-06 10:38:21.5135 INFO Route matched with {action = "getuser", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult getuser(System.String) on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:38:21.5135 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:38:21.5135 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:38:21.5135 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:38:21.5135 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:38:21.5135 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:38:21.5135 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:38:21.5719 DEBUG An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-06 10:38:21.5867 DEBUG Executed controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:38:21.5901 DEBUG Attempting to bind parameter 'fname' of type 'System.String' ...
+2024-03-06 10:38:21.5901 DEBUG Attempting to bind parameter 'fname' of type 'System.String' using the name 'fname' in request data ...
+2024-03-06 10:38:21.5901 DEBUG Done attempting to bind parameter 'fname' of type 'System.String'.
+2024-03-06 10:38:21.5901 DEBUG Done attempting to bind parameter 'fname' of type 'System.String'.
+2024-03-06 10:38:21.5901 DEBUG Attempting to validate the bound parameter 'fname' of type 'System.String' ...
+2024-03-06 10:38:21.5901 DEBUG Done attempting to validate the bound parameter 'fname' of type 'System.String'.
+2024-03-06 10:38:22.0261 INFO Entity Framework Core 3.1.0 initialized 'FundooContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2024-03-06 10:38:22.1789 DEBUG queryContext => new QueryingEnumerable<UserEntity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, UserEntity>, 
+    Repository_Layer.Context.FundooContext, 
+    DiagnosticsLogger<Query>
+)
+2024-03-06 10:38:22.2000 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:38:22.2771 DEBUG Created DbCommand for 'ExecuteReader' (75ms).
+2024-03-06 10:38:22.2771 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:38:22.4267 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:38:22.4400 DEBUG Executing DbCommand [Parameters=[@__fname_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[FName] = @__fname_0
+2024-03-06 10:38:22.4970 INFO Executed DbCommand (64ms) [Parameters=[@__fname_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[FName] = @__fname_0
+2024-03-06 10:38:22.5299 DEBUG Context 'FundooContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-03-06 10:38:22.5483 DEBUG A data reader was disposed.
+2024-03-06 10:38:22.5483 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:38:22.5483 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:38:22.5483 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-03-06 10:38:22.5483 DEBUG No information found on request to perform content negotiation.
+2024-03-06 10:38:22.5483 DEBUG Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-06 10:38:22.5483 DEBUG Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-06 10:38:22.5483 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-03-06 10:38:22.5483 INFO Executing ObjectResult, writing value of type 'Common_Layer.ResponseModel.ResModel`1[[System.Collections.Generic.List`1[[Repository_Layer.Entity.UserEntity, Repository_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-06 10:38:22.5631 INFO Executed action FundooNotes.Controllers.ReviewController.getuser (FundooNotes) in 1046.6545ms
+2024-03-06 10:38:22.5631 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:38:22.5631 DEBUG 'FundooContext' disposed.
+2024-03-06 10:38:22.5631 INFO Request finished in 1132.1334ms 200 application/json; charset=utf-8
+2024-03-06 10:38:28.8617 INFO Request starting HTTP/2.0 GET https://localhost:44352/api/Review/getCount  
+2024-03-06 10:38:28.8617 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:38:28.8617 DEBUG The request path  does not match the path filter
+2024-03-06 10:38:28.8617 DEBUG 1 candidate(s) found for the request path '/api/Review/getCount'
+2024-03-06 10:38:28.8617 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)' with route pattern 'api/Review/getCount' is valid for the request path '/api/Review/getCount'
+2024-03-06 10:38:28.8617 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:38:28.8617 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:38:28.8709 INFO Route matched with {action = "getCount", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult getCount() on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:38:28.8709 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:38:28.8709 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:38:28.8709 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:38:28.8709 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:38:28.8709 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:38:28.8709 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:38:28.8709 DEBUG Executed controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:38:28.8955 INFO Entity Framework Core 3.1.0 initialized 'FundooContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2024-03-06 10:38:28.9062 DEBUG queryContext => new QueryingEnumerable<int>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, int>, 
+    Repository_Layer.Context.FundooContext, 
+    DiagnosticsLogger<Query>
+)
+    .Single()
+2024-03-06 10:38:28.9062 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:38:28.9062 DEBUG Created DbCommand for 'ExecuteReader' (0ms).
+2024-03-06 10:38:28.9062 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:38:28.9062 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:38:28.9062 DEBUG Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [UserTable] AS [u]
+2024-03-06 10:38:28.9062 INFO Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [UserTable] AS [u]
+2024-03-06 10:38:28.9062 DEBUG A data reader was disposed.
+2024-03-06 10:38:28.9062 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:38:28.9062 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:38:28.9062 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-03-06 10:38:28.9062 DEBUG No information found on request to perform content negotiation.
+2024-03-06 10:38:28.9062 DEBUG Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-06 10:38:28.9062 DEBUG Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-06 10:38:28.9062 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-03-06 10:38:28.9062 INFO Executing ObjectResult, writing value of type 'Common_Layer.ResponseModel.ResModel`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-06 10:38:28.9062 INFO Executed action FundooNotes.Controllers.ReviewController.getCount (FundooNotes) in 45.1252ms
+2024-03-06 10:38:28.9062 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:38:28.9062 DEBUG 'FundooContext' disposed.
+2024-03-06 10:38:28.9062 INFO Request finished in 55.0207ms 200 application/json; charset=utf-8
+2024-03-06 10:42:34.4929 DEBUG Hosting starting
+2024-03-06 10:42:34.7169 INFO User profile is available. Using 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 10:42:34.7169 DEBUG Starting host: rabbitmq://localhost/
+2024-03-06 10:42:34.7558 DEBUG Reading data from file 'C:\Users\Ankit\AppData\Local\ASP.NET\DataProtection-Keys\key-da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e.xml'.
+2024-03-06 10:42:34.7558 DEBUG Connect: guest@localhost:5672/
+2024-03-06 10:42:34.7558 DEBUG Found key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e}.
+2024-03-06 10:42:34.7676 DEBUG Considering key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} with expiration date 2024-05-26 14:10:19Z as default key.
+2024-03-06 10:42:34.7806 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-06 10:42:34.7806 DEBUG Decrypting secret element using Windows DPAPI.
+2024-03-06 10:42:34.7806 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-03-06 10:42:34.7806 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-03-06 10:42:34.7806 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-03-06 10:42:34.7806 DEBUG Using key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} as the default key.
+2024-03-06 10:42:34.7806 DEBUG Key ring with default key {da8b2f2f-b49c-4b9a-b5d1-1c6af1ea984e} was loaded during application startup.
+2024-03-06 10:42:34.8140 DEBUG Connected: guest@localhost:5672/ (address: amqp://localhost:5672, local: 52103)
+2024-03-06 10:42:34.8802 DEBUG Loaded hosting startup assembly FundooNotes
+2024-03-06 10:42:34.8802 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-03-06 10:42:34.8802 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-03-06 10:42:34.8802 INFO Application started. Press Ctrl+C to shut down.
+2024-03-06 10:42:34.8802 INFO Hosting environment: Development
+2024-03-06 10:42:34.8802 INFO Content root path: F:\LOCOBUZZ\Backend\FundooNotes\FundooNotes
+2024-03-06 10:42:34.8802 DEBUG Hosting started
+2024-03-06 10:42:34.8976 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/index.html  
+2024-03-06 10:42:34.9528 DEBUG Wildcard detected, all requests with hosts will be allowed.
+2024-03-06 10:42:34.9696 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:42:35.0116 DEBUG Response markup is scheduled to include browser refresh script injection.
+2024-03-06 10:42:35.0463 DEBUG Response markup was updated to include browser refresh script injection.
+2024-03-06 10:42:35.0463 INFO Request finished in 151.4479ms 200 text/html;charset=utf-8
+2024-03-06 10:42:35.0463 INFO Request starting HTTP/2.0 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js  
+2024-03-06 10:42:35.0463 INFO Request starting HTTP/2.0 GET https://localhost:44352/_vs/browserLink  
+2024-03-06 10:42:35.0617 INFO Request finished in 4.5939ms 200 application/javascript; charset=utf-8
+2024-03-06 10:42:35.0903 INFO Request finished in 33.0495ms 200 text/javascript; charset=UTF-8
+2024-03-06 10:42:35.7934 INFO Request starting HTTP/2.0 GET https://localhost:44352/swagger/v1/swagger.json  
+2024-03-06 10:42:35.7934 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:42:35.9083 INFO Request finished in 115.0078ms 200 application/json;charset=utf-8
+2024-03-06 10:44:03.4434 INFO Request starting HTTP/2.0 PUT https://localhost:44352/api/Review/Update?email=finalcall1194%40gmail.com&fname=Harsh&lname=Raj  0
+2024-03-06 10:44:03.4434 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:44:03.4434 DEBUG PUT requests are not supported
+2024-03-06 10:44:03.4753 DEBUG 1 candidate(s) found for the request path '/api/Review/Update'
+2024-03-06 10:44:03.4753 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)' with route pattern 'api/Review/Update' is valid for the request path '/api/Review/Update'
+2024-03-06 10:44:03.4753 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:44:03.4753 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:44:03.4850 DEBUG Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+2024-03-06 10:44:03.5123 INFO Route matched with {action = "updateFnameLname", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult updateFnameLname(System.String, System.String, System.String) on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:44:03.5123 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:44:03.5123 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:44:03.5123 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:44:03.5123 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:44:03.5123 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:44:03.5123 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:44:03.5701 DEBUG An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-03-06 10:44:03.5827 DEBUG Executed controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:44:03.5827 DEBUG Attempting to bind parameter 'email' of type 'System.String' ...
+2024-03-06 10:44:03.5903 DEBUG Attempting to bind parameter 'email' of type 'System.String' using the name 'email' in request data ...
+2024-03-06 10:44:03.5903 DEBUG Done attempting to bind parameter 'email' of type 'System.String'.
+2024-03-06 10:44:03.5903 DEBUG Done attempting to bind parameter 'email' of type 'System.String'.
+2024-03-06 10:44:03.5903 DEBUG Attempting to validate the bound parameter 'email' of type 'System.String' ...
+2024-03-06 10:44:03.5903 DEBUG Done attempting to validate the bound parameter 'email' of type 'System.String'.
+2024-03-06 10:44:03.5903 DEBUG Attempting to bind parameter 'fname' of type 'System.String' ...
+2024-03-06 10:44:03.5903 DEBUG Attempting to bind parameter 'fname' of type 'System.String' using the name 'fname' in request data ...
+2024-03-06 10:44:03.5903 DEBUG Done attempting to bind parameter 'fname' of type 'System.String'.
+2024-03-06 10:44:03.5903 DEBUG Done attempting to bind parameter 'fname' of type 'System.String'.
+2024-03-06 10:44:03.5903 DEBUG Attempting to validate the bound parameter 'fname' of type 'System.String' ...
+2024-03-06 10:44:03.5903 DEBUG Done attempting to validate the bound parameter 'fname' of type 'System.String'.
+2024-03-06 10:44:03.5903 DEBUG Attempting to bind parameter 'lname' of type 'System.String' ...
+2024-03-06 10:44:03.5903 DEBUG Attempting to bind parameter 'lname' of type 'System.String' using the name 'lname' in request data ...
+2024-03-06 10:44:03.5903 DEBUG Done attempting to bind parameter 'lname' of type 'System.String'.
+2024-03-06 10:44:03.5903 DEBUG Done attempting to bind parameter 'lname' of type 'System.String'.
+2024-03-06 10:44:03.5903 DEBUG Attempting to validate the bound parameter 'lname' of type 'System.String' ...
+2024-03-06 10:44:03.5903 DEBUG Done attempting to validate the bound parameter 'lname' of type 'System.String'.
+2024-03-06 10:44:04.0202 INFO Entity Framework Core 3.1.0 initialized 'FundooContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2024-03-06 10:44:04.1723 DEBUG queryContext => new QueryingEnumerable<UserEntity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, UserEntity>, 
+    Repository_Layer.Context.FundooContext, 
+    DiagnosticsLogger<Query>
+)
+    .SingleOrDefault()
+2024-03-06 10:44:04.1950 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:44:04.2745 DEBUG Created DbCommand for 'ExecuteReader' (77ms).
+2024-03-06 10:44:04.2796 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:04.4287 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:04.4409 DEBUG Executing DbCommand [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-03-06 10:44:04.4945 INFO Executed DbCommand (61ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-03-06 10:44:04.5290 DEBUG Context 'FundooContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-03-06 10:44:04.5488 DEBUG A data reader was disposed.
+2024-03-06 10:44:04.5488 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:04.5488 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:04.5488 DEBUG SaveChanges starting for 'FundooContext'.
+2024-03-06 10:44:04.5488 DEBUG DetectChanges starting for 'FundooContext'.
+2024-03-06 10:44:04.5669 DEBUG Unchanged 'UserEntity.LName' detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-03-06 10:44:04.5669 DEBUG An 'UserEntity' entity tracked by 'FundooContext' changed from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-03-06 10:44:04.5748 DEBUG DetectChanges completed for 'FundooContext'.
+2024-03-06 10:44:04.5748 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:04.5748 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:04.5748 DEBUG Beginning transaction with isolation level 'Unspecified'.
+2024-03-06 10:44:04.5748 DEBUG Began transaction with isolation level 'ReadCommitted'.
+2024-03-06 10:44:04.6193 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:44:04.6193 DEBUG Created DbCommand for 'ExecuteReader' (0ms).
+2024-03-06 10:44:04.6193 DEBUG Executing DbCommand [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [UserTable] SET [LName] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2024-03-06 10:44:04.6263 INFO Executed DbCommand (6ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [UserTable] SET [LName] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT;
+2024-03-06 10:44:04.6263 DEBUG A data reader was disposed.
+2024-03-06 10:44:04.6263 DEBUG Committing transaction.
+2024-03-06 10:44:04.6263 DEBUG Committing transaction.
+2024-03-06 10:44:04.6263 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:04.6263 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:04.6263 DEBUG Disposing transaction.
+2024-03-06 10:44:04.6374 DEBUG An 'UserEntity' entity tracked by 'FundooContext' changed from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-03-06 10:44:04.6374 DEBUG SaveChanges completed for 'FundooContext' with 1 entities written to the database.
+2024-03-06 10:44:04.6374 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-03-06 10:44:04.6374 DEBUG No information found on request to perform content negotiation.
+2024-03-06 10:44:04.6374 DEBUG Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-06 10:44:04.6374 DEBUG Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-06 10:44:04.6374 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-03-06 10:44:04.6374 INFO Executing ObjectResult, writing value of type 'Common_Layer.ResponseModel.ResModel`1[[Repository_Layer.Entity.UserEntity, Repository_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-06 10:44:04.6374 INFO Executed action FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes) in 1131.3129ms
+2024-03-06 10:44:04.6374 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.updateFnameLname (FundooNotes)'
+2024-03-06 10:44:04.6374 DEBUG 'FundooContext' disposed.
+2024-03-06 10:44:04.6374 INFO Request finished in 1207.1888ms 200 application/json; charset=utf-8
+2024-03-06 10:44:13.3041 INFO Request starting HTTP/2.0 GET https://localhost:44352/api/Review/getUser?fname=Harsh  
+2024-03-06 10:44:13.3041 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:44:13.3041 DEBUG The request path  does not match the path filter
+2024-03-06 10:44:13.3086 DEBUG 1 candidate(s) found for the request path '/api/Review/getUser'
+2024-03-06 10:44:13.3086 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)' with route pattern 'api/Review/getUser' is valid for the request path '/api/Review/getUser'
+2024-03-06 10:44:13.3086 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:44:13.3086 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:44:13.3086 INFO Route matched with {action = "getuser", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult getuser(System.String) on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:44:13.3086 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:44:13.3086 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:44:13.3086 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:44:13.3086 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:44:13.3086 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:44:13.3086 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:44:13.3086 DEBUG Executed controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:44:13.3086 DEBUG Attempting to bind parameter 'fname' of type 'System.String' ...
+2024-03-06 10:44:13.3086 DEBUG Attempting to bind parameter 'fname' of type 'System.String' using the name 'fname' in request data ...
+2024-03-06 10:44:13.3086 DEBUG Done attempting to bind parameter 'fname' of type 'System.String'.
+2024-03-06 10:44:13.3086 DEBUG Done attempting to bind parameter 'fname' of type 'System.String'.
+2024-03-06 10:44:13.3086 DEBUG Attempting to validate the bound parameter 'fname' of type 'System.String' ...
+2024-03-06 10:44:13.3086 DEBUG Done attempting to validate the bound parameter 'fname' of type 'System.String'.
+2024-03-06 10:44:13.3396 INFO Entity Framework Core 3.1.0 initialized 'FundooContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2024-03-06 10:44:13.3396 DEBUG queryContext => new QueryingEnumerable<UserEntity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, UserEntity>, 
+    Repository_Layer.Context.FundooContext, 
+    DiagnosticsLogger<Query>
+)
+2024-03-06 10:44:13.3396 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:44:13.3396 DEBUG Created DbCommand for 'ExecuteReader' (0ms).
+2024-03-06 10:44:13.3396 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:13.3396 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:13.3396 DEBUG Executing DbCommand [Parameters=[@__fname_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[FName] = @__fname_0
+2024-03-06 10:44:13.3396 INFO Executed DbCommand (2ms) [Parameters=[@__fname_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[FName], [u].[LName], [u].[Password]
+FROM [UserTable] AS [u]
+WHERE [u].[FName] = @__fname_0
+2024-03-06 10:44:13.3396 DEBUG Context 'FundooContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-03-06 10:44:13.3396 DEBUG A data reader was disposed.
+2024-03-06 10:44:13.3396 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:13.3396 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:13.3396 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-03-06 10:44:13.3396 DEBUG No information found on request to perform content negotiation.
+2024-03-06 10:44:13.3396 DEBUG Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-06 10:44:13.3396 DEBUG Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-06 10:44:13.3396 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-03-06 10:44:13.3396 INFO Executing ObjectResult, writing value of type 'Common_Layer.ResponseModel.ResModel`1[[System.Collections.Generic.List`1[[Repository_Layer.Entity.UserEntity, Repository_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-06 10:44:13.3396 INFO Executed action FundooNotes.Controllers.ReviewController.getuser (FundooNotes) in 36.5899ms
+2024-03-06 10:44:13.3396 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.getuser (FundooNotes)'
+2024-03-06 10:44:13.3396 DEBUG 'FundooContext' disposed.
+2024-03-06 10:44:13.3396 INFO Request finished in 46.0801ms 200 application/json; charset=utf-8
+2024-03-06 10:44:20.7662 INFO Request starting HTTP/2.0 GET https://localhost:44352/api/Review/getCount  
+2024-03-06 10:44:20.7662 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2024-03-06 10:44:20.7662 DEBUG The request path  does not match the path filter
+2024-03-06 10:44:20.7662 DEBUG 1 candidate(s) found for the request path '/api/Review/getCount'
+2024-03-06 10:44:20.7662 DEBUG Endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)' with route pattern 'api/Review/getCount' is valid for the request path '/api/Review/getCount'
+2024-03-06 10:44:20.7662 DEBUG Request matched endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:44:20.7662 INFO Executing endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:44:20.7662 INFO Route matched with {action = "getCount", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult getCount() on controller FundooNotes.Controllers.ReviewController (FundooNotes).
+2024-03-06 10:44:20.7662 DEBUG Execution plan of authorization filters (in the following order): None
+2024-03-06 10:44:20.7662 DEBUG Execution plan of resource filters (in the following order): None
+2024-03-06 10:44:20.7662 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-03-06 10:44:20.7662 DEBUG Execution plan of exception filters (in the following order): None
+2024-03-06 10:44:20.7662 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-03-06 10:44:20.7662 DEBUG Executing controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:44:20.7777 DEBUG Executed controller factory for controller FundooNotes.Controllers.ReviewController (FundooNotes)
+2024-03-06 10:44:20.7777 INFO Entity Framework Core 3.1.0 initialized 'FundooContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2024-03-06 10:44:20.8018 DEBUG queryContext => new QueryingEnumerable<int>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, int>, 
+    Repository_Layer.Context.FundooContext, 
+    DiagnosticsLogger<Query>
+)
+    .Single()
+2024-03-06 10:44:20.8018 DEBUG Creating DbCommand for 'ExecuteReader'.
+2024-03-06 10:44:20.8018 DEBUG Created DbCommand for 'ExecuteReader' (0ms).
+2024-03-06 10:44:20.8018 DEBUG Opening connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:20.8018 DEBUG Opened connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:20.8018 DEBUG Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [UserTable] AS [u]
+2024-03-06 10:44:20.8095 INFO Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [UserTable] AS [u]
+2024-03-06 10:44:20.8095 DEBUG A data reader was disposed.
+2024-03-06 10:44:20.8095 DEBUG Closing connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:20.8095 DEBUG Closed connection to database 'FunDoNotes' on server 'ANKIT\SQLEXPRESS'.
+2024-03-06 10:44:20.8095 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-03-06 10:44:20.8095 DEBUG No information found on request to perform content negotiation.
+2024-03-06 10:44:20.8095 DEBUG Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-03-06 10:44:20.8095 DEBUG Attempting to select the first formatter in the output formatters list which can write the result.
+2024-03-06 10:44:20.8095 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-03-06 10:44:20.8095 INFO Executing ObjectResult, writing value of type 'Common_Layer.ResponseModel.ResModel`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-06 10:44:20.8095 INFO Executed action FundooNotes.Controllers.ReviewController.getCount (FundooNotes) in 38.5426ms
+2024-03-06 10:44:20.8095 INFO Executed endpoint 'FundooNotes.Controllers.ReviewController.getCount (FundooNotes)'
+2024-03-06 10:44:20.8095 DEBUG 'FundooContext' disposed.
+2024-03-06 10:44:20.8095 INFO Request finished in 47.8601ms 200 application/json; charset=utf-8

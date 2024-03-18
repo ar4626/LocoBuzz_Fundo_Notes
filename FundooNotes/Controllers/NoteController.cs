@@ -62,7 +62,7 @@ namespace FundooNotes.Controllers
         [Authorize]
         [HttpGet]
         [Route ("GetAllNotes")]
-        public async Task<ActionResult> GetAllNotes()
+        /*public async Task<ActionResult> GetAllNotes()
         {
             try
             {
@@ -99,6 +99,34 @@ namespace FundooNotes.Controllers
                 }
 
                 if (mergedList.Count==0)
+                {
+                    return BadRequest(new ResModel<List<NoteEntity>> { Success = false, Message = "No Notes are present for the User", Data = null });
+                }
+                else
+                {
+                    return Ok(new ResModel<List<NoteEntity>> { Success = true, Message = "Notes Fetched", Data = mergedList });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "An error occurred while processing GetAllNotes.");
+                return BadRequest(new ResModel<List<NoteEntity>> { Success = false, Message = ex.Message, Data = null });
+            }
+
+        }*/
+        public async Task<ActionResult> GetAllNotes()
+        {
+            try
+            {
+                int userId = Convert.ToInt32(User.FindFirst("UserId").Value);
+                string email = User.FindFirst("Email").Value;
+
+                List<NoteEntity> mergedList = noteManager.GetAllNotes(userId);
+
+
+
+                if (mergedList.Count == 0)
                 {
                     return BadRequest(new ResModel<List<NoteEntity>> { Success = false, Message = "No Notes are present for the User", Data = null });
                 }
